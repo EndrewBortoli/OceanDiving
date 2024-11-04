@@ -1,0 +1,99 @@
+.selection-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* This helps push the footer to the bottom */
+  text-align: center;
+  color: white;
+  height: 100vh; /* Full height to ensure footer stays at the bottom */
+  padding: 20px;
+  box-sizing: border-box;
+  width: 100vw;
+}
+
+.logo {
+  width: 150px;
+  height: 150px;
+  object-fit: contain; /* Ensures the logo maintains its aspect ratio */
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 36px;
+  margin: 20px 0;
+  color: #FFFFFF; /* Bright yellow color for better contrast */
+  letter-spacing: 1.5px;
+}
+
+.text {
+  font-size: 20px !important; /* Increased font size for better readability */
+  margin-bottom: 30px;
+  color: #ddd !important; /* Slightly lighter shade for text readability */
+  line-height: 1.5; /* Improved spacing between lines */
+  max-width: 900px; /* To keep the text blocks at a comfortable reading width */
+}
+
+.image-selection {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-top: 30px;
+}
+
+.image-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.image-button img {
+  width: 120px; /* Slightly bigger for better visual impact */
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid white;
+  transition: transform 0.3s;
+}
+
+.image-button p {
+  margin-top: 10px;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.image-button:hover img {
+  transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+.selected img {
+  border-color: #ECAA01; /* Highlight border for selected option */
+  transform: scale(1.1); /* Keep the selected item slightly zoomed */
+}
+
+.footer-text {
+  font-size: 14px;
+  color: #bbb; /* Lighter shade for the footer text */
+  margin-bottom: 10px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+/* Ensure footer stays at the bottom */
+.footer-wrapper {
+  width: 100%;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+h6{
+  margin-top: 50px;
+  margin-bottom: 0;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
