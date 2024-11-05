@@ -54,8 +54,7 @@ import Eutrofizado1 from './assets/oceandiving/mission3/eutrofizado02.jpg';
 
 //pulei linhas pra não arriscar de dar erro depois. depois pode apagar
 import MapaAntartica from './assets/oceandiving/mission4/antartica_mapa.png';
-import GeloDerretendo from './assets/oceandiving/mission4/gelo_derretendo.jpg'
->>>>>>> c7d06475037910b1627bc770098e160b19b2902d
+import GeloDerretendo from './assets/oceandiving/mission4/gelo_derretendo.jpg';
 
 // Função que retorna as missões com base no nível de dificuldade
 const getMissionsByDifficulty = (difficulty) => {
