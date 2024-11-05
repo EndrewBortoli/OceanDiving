@@ -633,7 +633,7 @@ const getMissionsByDifficulty = (difficulty) => {
                                             explanation: " Incorreta, meu explorador. Com menos peixes, menos empregos são criados, e a água se torna suja, afastando os turistas."
                                         }
                                         
-                                    ]
+                                    ]}
                                     correctAnswerId={null}
                                     nextStage={5}
                                 />
