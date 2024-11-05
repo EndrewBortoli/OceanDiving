@@ -714,7 +714,7 @@ const getMissionsByDifficulty = (difficulty) => {
                                         {
                                             id: 'a',
                                             text: "A parte em volta da Antártica está quente.",
-                                            explanation: ""
+                                            explanation: "Sim, as temperaturas em volta estão só aumentando. Agora, vamos explorar os impactos dessa mudança."
                                         },
                                         {
                                             id: 'b',
