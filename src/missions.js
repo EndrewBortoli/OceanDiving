@@ -40,6 +40,7 @@ import TurtlePesca from './assets/oceandiving/mission1/tartarugapescafantasma.jp
 import FocaPesca from './assets/oceandiving/mission1/focapescafantasma.jpg';
 import CoraisPesca from './assets/oceandiving/mission1/coraisredefantasma.png';
 import Eutrofizado1 from './assets/oceandiving/mission3/eutrofizado02.jpg';
+import RedeFantasma from './assets/oceandiving/mission1/redefantasma.jpg';
 
 
 
@@ -113,7 +114,7 @@ const getMissionsByDifficulty = (difficulty) => {
                                         { id: 'b', text: 'Uma tartaruga em seu habitat natural, nadando livremente. ', explanation: 'Hmm, não é bem isso. Essa tartaruga não está nadando livremente. Ela está presa em uma rede, um problema típico da pesca fantasma. ' },
                                         { id: 'c', text: 'Uma tartaruga sendo libertada por mergulhadores. . ', explanation: 'Boa tentativa, mas não foi isso que aconteceu. Essa tartaruga não foi salva por mergulhadores; ela acabou sendo vítima da pesca fantasma. ' }
                                     ]}
-                                    correctAnswerId={'a'}
+                                    correctAnswerId={null}
                                     nextStage={1}
                                 />
                             ),
@@ -156,7 +157,7 @@ const getMissionsByDifficulty = (difficulty) => {
                         },
                         {
                             displayMap: false,
-                            fallbackImage: pace_snow,
+                            fallbackImage: RedeFantasma,
                             next: 3,
                             component: (
                                 <OnlyOneQuestion
@@ -166,25 +167,25 @@ const getMissionsByDifficulty = (difficulty) => {
                                         { id: 'b', text: 'A rede ajuda os animais a se esconderem de predadores.', explanation: 'Não exatamente. Embora pareça um abrigo, essa rede não oferece proteção; ela representa um grande risco para os animais. ' },
                                         { id: 'c', text: 'A rede oferece um lugar seguro para os animais descansarem. ', explanation: 'Boa tentativa, mas redes abandonadas não são seguras para descanso. Elas são armadilhas que colocam a vida dos animais em perigo. ' }
                                     ]}
-                                    correctAnswerId={'a'}
+                                    correctAnswerId={null}
                                     nextStage={3}
                                 />
                             ),
                         },
                         {
                             displayMap: false,
-                            fallbackImage: pace_snow,
+                            fallbackImage: CoraisPesca,
                             next: 4,
                             component: (
                                 <OnlyOneQuestion
-                                    questionText={"Can you come up with some theory about what is happening here? "}
+                                    questionText={"Olhe para esse recife! O que pode acontecer com o ecossistema local quando redes de pesca abandonadas ficam presas nos corais? "}
                                     options={[
-                                        { id: 'a', text: 'Alien activity: The cracks in the snow were caused by UFOs landing, leaving behind traces of extraterrestrial visitors!', explanation: 'Oops, looks like that’s not quite right! The correct answer is Early signs of Spring: The warmth of the approaching Spring is causing the snow to melt unevenly, leaving cracks and patches of exposed ground' },
-                                        { id: 'b', text: 'Earthquake tremors: The cracked snow is due to small earthquake tremors, shaking the ground and splitting the snow layer.', explanation: 'Oops, looks like that’s not quite right! The correct answer is Early signs of Spring: The warmth of the approaching Spring is causing the snow to melt unevenly, leaving cracks and patches of exposed ground' },
-                                        { id: 'c', text: 'Underground creatures: A colony of giant moles is tunneling just beneath the surface, causing the snow to crack and reveal patches of dirt.', explanation: 'Oops, looks like that’s not quite right! The correct answer is Early signs of Spring: The warmth of the approaching Spring is causing the snow to melt unevenly, leaving cracks and patches of exposed ground' },
-                                        { id: 'd', text: 'A giant sea monster Early signs of Spring: The warmth of the approaching Spring is causing the snow to melt unevenly, leaving cracks and patches of exposed ground.taking a bath', explanation: 'Congratulations! You got it right!' }
+                                        { id: 'a', text: 'As redes vão se transformar em uma base segura para os corais crescerem. ', explanation: ' Não é bem isso. Redes de pesca não ajudam na recuperação dos corais; elas causam danos e acabam atrapalhando o crescimento, siga em frente e saiba mais!' },
+                                        { id: 'b', text: 'As redes podem danificar os corais e prejudicar a vida marinha que depende deles. ', explanation: 'Isso mesmo! Corais são frágeis e importantes para muitos peixes e outros seres, mas redes abandonadas podem destruir esses habitats, siga em frente e saiba mais! ' },
+                                        { id: 'c', text: 'Os corais vão engolir as redes, absorvendo-as de forma natural.', explanation: 'Boa tentativa, mas corais não conseguem absorver redes. Esses materiais danificam e podem até matar os corais, siga em frente e saiba mais! ' },
+                                
                                     ]}
-                                    correctAnswerId={'a'}
+                                    correctAnswerId={null}
                                     nextStage={4}
                                 />
                             ),
