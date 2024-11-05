@@ -737,7 +737,7 @@ const getMissionsByDifficulty = (difficulty) => {
                                             explanation: "Na verdade, a parte em volta está quente! Essas temperaturas não são adequadas para o ecossistema do continente e o oceano em sua volta. Assim, vamos explorar esse problema mais a fundo e entender o porquê disso."
                                         },
                                     ]}
-                                    correctAnswerId={a}
+                                    correctAnswerId={null}
                                     nextStage={2}
                                 />
                             ),
