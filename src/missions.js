@@ -34,7 +34,7 @@ import FinalStage from './components/stages/FinalStage';
 import InformativeSectionStage from './components/stages/InformativeSectionStage';
 import MapFocusStage from './components/stages/MapFocusStage';
 import OnlyOneQuestion from './components/stages/OnlyOneQuestion';
-
+import GolfeDoMexico from './assets/oceandiving/mission3/eutrofizado02.jpg'
 
 // Função que retorna as missões com base no nível de dificuldade
 const getMissionsByDifficulty = (difficulty) => {
@@ -44,15 +44,15 @@ const getMissionsByDifficulty = (difficulty) => {
                 {
                     index: 0,
                     concluded: false,
-                    title: "North America from Above",
-                    lat: 42.81671,
-                    lng: -69.95354,
-                    location: "Northeastern US and Canada",
+                    title: "Pesca fantasma",
+                    lat: -9.5627778,
+                    lng: -35.6231667,
+                    location: "Costa brasileira",
                     image: pace_maine,
-                    text: "✨ Your first mission is coming up: We’ll be diving into the ocean’s colors, discovering how the light bouncing off the water can reveal hidden secrets about life in the whole world! The region, encompassing Georges Bank and the Gulf of Maine, is renowned for its rich biological productivity, historically making it a commercial fishing hub. However, overfishing and climate change now pose significant threats to this vital ecosystem.",
+                    text: "A pesca fantasma é caracterizada por petrechos de pesca que são abandonados ou descartados no mar, como redes ou linhas. Tais materiais afetam em grande escala a biodiversidade marinha, tendo em vista que a ONG World Animal Protection estima que 10% do lixo plástico que entra nos mares e oceanos é equipamento de pesca perdido ou abandonado nos mares (redes fantasmas). No Brasil, cerca de 69 mil animais são afetados pela pesca fantasma por dia. ",
                     initialViewState: {
-                        latitude: 42.81671,
-                        longitude: -69.95354,
+                        latitude: -9.5627778,
+                        longitude: -35.6231667,
                         zoom: 7,
                     },
                     heatmapConfig: {
@@ -87,12 +87,13 @@ const getMissionsByDifficulty = (difficulty) => {
                             next: 1,
                             component: (
                                 <OnlyOneQuestion
-                                    questionText={"Take a look at this awesome image. What do you see? What’s different or exciting? What caught your eye? Now, look at the colours in it, is the white you see just one thing or more than one?"}
+                                    questionText={"Essa imagem representa um enorme problema. O que você vê? "}
                                     options={[
-                                        { id: 'a', text: 'It is all the same', explanation: 'Not exactely! Let\'s look a little closer!' },
-                                        { id: 'b', text: 'There are different whites', explanation: '' }
+                                        { id: 'a', text: 'Uma tartaruga morta devido aos detritos de pesca.', explanation: '' },
+                                        { id: 'b', text: 'Uma tartaruga em seu habitat natural, nadando livremente. ', explanation: 'Hmm, não é bem isso. Essa tartaruga não está nadando livremente. Ela está presa em uma rede, um problema típico da pesca fantasma. ' },
+                                        { id: 'c', text: 'Uma tartaruga sendo libertada por mergulhadores. . ', explanation: 'Boa tentativa, mas não foi isso que aconteceu. Essa tartaruga não foi salva por mergulhadores; ela acabou sendo vítima da pesca fantasma. ' }
                                     ]}
-                                    correctAnswerId={'b'}
+                                    correctAnswerId={'a'}
                                     nextStage={1}
                                 />
                             ),
@@ -436,20 +437,21 @@ const getMissionsByDifficulty = (difficulty) => {
                     ],
                 },
                 {
+
                     index: 2,
                     concluded: false,
-                    title: "Hidden Springs, Hidden Secrets",
-                    lat: 24.772691,
-                    lng: 57.524873,
-                    location: "Oman",
-                    image: oman_picture,
-                    text: "The water is full of all kinds of phytoplankton species, and right now, the main way to tell them apart is by scooping up water samples—talk about time-consuming and pricey! But what if we could use images to tell them apart instead, and maybe even discover more? Oman, located at the southeastern tip of the Arabian Peninsula, is a country of stunning landscapes and warm climate. Its coastline boasts crystal-clear waters that are home to a rich marine biodiversity, including turtles and dolphins. The proliferation of phytoplankton in the coastal waters plays a crucial role in this ecosystem, serving as the foundation of the food chain and contributing to the health of the oceans. This connection between nature and culture highlights how Oman is a fascinating destination.",
+                    title: "Eutrofização no Golfo do México.",
+                    lat: 25.350780,
+                    lng: -90.176988,
+                    location: "Golfo do México",
+                    image: GolfeDoMexico,
+                    text: "O Golfo do México é uma vasta bacia oceânica localizada entre a América do Norte e a América Central, sendo considerado o maior golfo do mundo. Ele cobre uma área de aproximadamente 1,5 milhões de km² e possui um volume de cerca de 2.400 mil km³. Suas águas banham os Estados Unidos, incluindo estados como Flórida, Alabama, Mississippi, Louisiana e Texas; o México, com estados como Tamaulipas e Veracruz; e, a ilha de Cuba. ",
                     displayMap: true,
                     fallbackImage: oman_pace,
                     csvPath: omanData,
                     initialViewState: {
-                        latitude: 24.772691,
-                        longitude: 57.524873,
+                        latitude: 25.350780,
+                        longitude: -90.176988,
                         zoom: 7,
                     },
                     heatmapConfig: {
