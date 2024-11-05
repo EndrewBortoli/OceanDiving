@@ -617,33 +617,23 @@ const getMissionsByDifficulty = (difficulty) => {
                             next: 5,
                             component: (
                                 <OnlyOneQuestion
-                                    questionText={"How can a picture like this help us protect nature and understand what’s happening?"}
+                                    questionText={"Como você acha que esses problemas afetam as regiões locais? "}
                                     options={[
                                         {
                                             id: 'a',
-                                            text: "A picture shows us where nature might be in trouble!",
-                                            explanation: "Exactly! We can see changes in landscapes, spot endangered species, and track how healthy ecosystems are."
+                                            text: "Melhoram a pesca, aumentam o turismo e tornam a água mais limpa.",
+                                            explanation: "Incorreto. Na verdade, a eutrofização faz com que haja menos peixes e a água fica suja, o que afasta turistas. "
                                         },
                                         {
                                             id: 'b',
-                                            text: 'It helps us find patterns!',
-                                            explanation: "Absolutely! By looking at images over time, we can spot changes like shrinking forests or fewer animals, giving us clues on what needs protecting."
+                                            text: 'Diminui a quantidade de peixes, prejudica a economia local e pode tornar a 	água imprópria para beber.',
+                                            explanation: "É isso mesmo, boa, minha lenda! Menos oxigênio na água significa menos peixes, e a água pode ficar perigosa para beber. "
                                         },
-                                        {
-                                            id: 'c',
-                                            text: 'Pictures let us see without disturbing!',
-                                            explanation: "You’re spot on! We can observe wildlife and nature from a distance, gathering information without interrupting the natural world."
-                                        },
-                                        {
-                                            id: 'd',
-                                            text: 'They spread the word!',
-                                            explanation: "Exactly! A powerful image can inspire others to care about nature and take action to protect it."
-                                        },
-                                        {
-                                            id: 'e',
-                                            text: 'It’s like a map for conservation!',
-                                            explanation: "Correct! Images help scientists and conservationists know where to focus their efforts to save biodiversity."
-                                        },
+                                        { id: 'c',
+                                            text: ' Criam mais empregos nas indústrias de pesca, aumentam a qualidade da água e atraem mais turistas.',
+                                            explanation: " Incorreta, meu explorador. Com menos peixes, menos empregos são criados, e a água se torna suja, afastando os turistas."
+                                        }
+                                        
                                     ]}
                                     correctAnswerId={null}
                                     nextStage={5}
@@ -725,7 +715,7 @@ const getMissionsByDifficulty = (difficulty) => {
                                         {
                                             id: 'a',
                                             text: "A parte em volta da Antártica está quente.",
-                                            explanation: ""
+                                            explanation: "Sim, as temperaturas em volta estão só aumentando. Agora, vamos explorar os impactos dessa mudança."
                                         },
                                         {
                                             id: 'b',
@@ -739,7 +729,7 @@ const getMissionsByDifficulty = (difficulty) => {
                                         },
                                     ]}
                                     correctAnswerId={null}
-                                    nextStage={2}
+                                    nextStage={1}
                                 />
                             ),
                         },
