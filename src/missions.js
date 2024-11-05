@@ -35,6 +35,10 @@ import InformativeSectionStage from './components/stages/InformativeSectionStage
 import MapFocusStage from './components/stages/MapFocusStage';
 import OnlyOneQuestion from './components/stages/OnlyOneQuestion';
 import GolfeDoMexico from './assets/oceandiving/mission3/eutrofizado02.jpg'
+import CostaBrasileira from './assets/oceandiving/mission1/costabrasileira.jpeg'
+import TurtlePesca from './assets/oceandiving/mission1/tartarugapescafantasma.jpg'
+import FocaPesca from './assets/oceandiving/mission1/focapescafantasma.jpg'
+import CoraisPesca from './assets/oceandiving/mission1/coraisredefantasma.png'
 
 // Função que retorna as missões com base no nível de dificuldade
 const getMissionsByDifficulty = (difficulty) => {
@@ -48,7 +52,7 @@ const getMissionsByDifficulty = (difficulty) => {
                     lat: -9.5627778,
                     lng: -35.6231667,
                     location: "Costa brasileira",
-                    image: pace_maine,
+                    image: CostaBrasileira,
                     text: "A pesca fantasma é caracterizada por petrechos de pesca que são abandonados ou descartados no mar, como redes ou linhas. Tais materiais afetam em grande escala a biodiversidade marinha, tendo em vista que a ONG World Animal Protection estima que 10% do lixo plástico que entra nos mares e oceanos é equipamento de pesca perdido ou abandonado nos mares (redes fantasmas). No Brasil, cerca de 69 mil animais são afetados pela pesca fantasma por dia. ",
                     initialViewState: {
                         latitude: -9.5627778,
@@ -83,13 +87,13 @@ const getMissionsByDifficulty = (difficulty) => {
                     stages: [
                         {
                             displayMap: false,
-                            fallbackImage: pace_maine,
+                            fallbackImage: TurtlePesca,
                             next: 1,
                             component: (
                                 <OnlyOneQuestion
                                     questionText={"Essa imagem representa um enorme problema. O que você vê? "}
                                     options={[
-                                        { id: 'a', text: 'Uma tartaruga morta devido aos detritos de pesca.', explanation: '' },
+                                        { id: 'a', text: 'Uma tartaruga morta devido aos detritos de pesca.', explanation: 'Isso mesmo, que olhar afiado! Essa tartaruga foi afetada pelo problema da pesca fantasma e infelizmente morreu por conta disso.'},
                                         { id: 'b', text: 'Uma tartaruga em seu habitat natural, nadando livremente. ', explanation: 'Hmm, não é bem isso. Essa tartaruga não está nadando livremente. Ela está presa em uma rede, um problema típico da pesca fantasma. ' },
                                         { id: 'c', text: 'Uma tartaruga sendo libertada por mergulhadores. . ', explanation: 'Boa tentativa, mas não foi isso que aconteceu. Essa tartaruga não foi salva por mergulhadores; ela acabou sendo vítima da pesca fantasma. ' }
                                     ]}
@@ -105,28 +109,28 @@ const getMissionsByDifficulty = (difficulty) => {
                             component: (
                                 <InformativeSectionStage nextStage={2}>
                                     <div className="mission-card-header">
-                                        <h2>The whites</h2>
-                                        <h4>There are two white things in the picture: clouds and snow.</h4>
+                                        <h2>Pesca Fantasma</h2>
+                                        <h4>Um pouco mais sobre o problema da Pesca Fantasma</h4>
                                     </div>
                                     <div className="list">
-                                        <h3>Here are some tips to help tell them apart:</h3>
+                                         <h3>Animal preso em rede fantasma</h3>
                                         <ul>
                                             <div className="image-container">
-                                                <img src={pace_clouds}></img>
+                                                <img src={FocaPesca}></img>
                                             </div>
-                                            <li>Clouds:</li>
+                            
                                             <ul>
-                                                <li>Clouds appear as bright white, fluffy patches. They are often more irregular in shape and can be seen floating over land and water.</li>
-                                                <li>In this image, clouds tend to have a softer, more diffuse appearance and are present in various parts, such as over the ocean on the right side, and some cover can also be seen over the land.
+                                                <li>A pesca fantasma é um problemão! Ela não só coloca em risco os animais, mas também impacta vários outros seres que vivem no mar — é o que chamamos de biodiversidade marinha.  </li>
+                                                <li>E olha só: o Brasil é um dos lugares mais afetados, segundo a ONG World Animal Protection. Eles estimam que, todos os dias, cerca de 69 mil animais sofrem com redes e materiais de pesca abandonados na nossa costa! É um desafio enorme que nem sempre a gente vê, mas que pode até causar a extinção de espécies superimportantes para o equilíbrio do oceano e para todos nós!
                                                 </li>
                                             </ul>
                                             <div className="image-container">
-                                                <img src={pace_snow}></img>
+                                                <img src={CoraisPesca}></img>
                                             </div>
-                                            <li>Snow:</li>
+                                    
                                             <ul>
-                                                <li>Snow, on the other hand, covers large areas of the land, especially in the northern regions. It has a more uniform and textured look, as it blankets the surface evenly.</li>
-                                                <li>The snow appears as a solid white or light gray color and tends to follow the contours of the land, particularly in the upper part of the image (towards the top center and left), where the land is covered by snow.</li>
+                                                <li>A imagem acima mostra uma rede de pesca que foi encontrada em cima de vários corais na área de visitação dos Galés de Maragogi, no Brasil, e que precisou ser retirada por profissionais.</li>
+                                                <li>É fácil perceber o grande problema que isso representa! Redes presas em corais podem acabar com habitats essenciais para muitos seres vivos, e isso afeta o ecossistema — ou seja, o conjunto de seres que vivem e dependem uns dos outros para manter o equilíbrio no ambiente. No fim, esses materiais abandonados prejudicam toda a biodiversidade e desorganizam o ecossistema marinho. </li>
                                             </ul>
 
                                         </ul>
@@ -140,12 +144,13 @@ const getMissionsByDifficulty = (difficulty) => {
                             next: 3,
                             component: (
                                 <OnlyOneQuestion
-                                    questionText={"Take a look at the snow, do you notice anything strange about how it looks?"}
+                                    questionText={"Esta rede foi deixada no oceano. De acordo com seus conhecimentosque pode acontecer com os animais marinhos que encontram redes abandonadas como essa? "}
                                     options={[
-                                        { id: 'a', text: 'No', explanation: 'Take a closer look! While snow covers the ground, there are patches of brown earth peeking through. The snow itself seems cracked, like it’s resting on a layer of sediment.' },
-                                        { id: 'b', text: 'Yes', explanation: 'Correct, now we can look closer' }
+                                        { id: 'a', text: 'Eles podem acabar presos na rede e ficar feridos ou morrer. ', explanation: 'Incrível! Isso mesmo, esses materiais descartados nos oceanos prejudicam demais a biodiversidade marinha e principalmente os animais.' },
+                                        { id: 'b', text: 'A rede ajuda os animais a se esconderem de predadores.', explanation: 'Não exatamente. Embora pareça um abrigo, essa rede não oferece proteção; ela representa um grande risco para os animais. ' },
+                                        { id: 'c', text: 'A rede oferece um lugar seguro para os animais descansarem. ', explanation: 'Boa tentativa, mas redes abandonadas não são seguras para descanso. Elas são armadilhas que colocam a vida dos animais em perigo. ' }
                                     ]}
-                                    correctAnswerId={'b'}
+                                    correctAnswerId={'a'}
                                     nextStage={3}
                                 />
                             ),
