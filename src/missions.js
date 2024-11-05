@@ -738,7 +738,7 @@ const getMissionsByDifficulty = (difficulty) => {
                                         },
                                     ]}
                                     correctAnswerId={null}
-                                    nextStage={2}
+                                    nextStage={1}
                                 />
                             ),
                         },
