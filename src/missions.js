@@ -34,7 +34,8 @@ import FinalStage from './components/stages/FinalStage';
 import InformativeSectionStage from './components/stages/InformativeSectionStage';
 import MapFocusStage from './components/stages/MapFocusStage';
 import OnlyOneQuestion from './components/stages/OnlyOneQuestion';
-import GolfeDoMexico from './assets/oceandiving/mission3/eutrofizado02.jpg'
+import GolfeDoMexico from './assets/oceandiving/mission3/golfomexico2.jpg';
+import Eutrofizado1 from './assets/oceandiving/mission3/eutrofizado02.jpg';
 
 // Função que retorna as missões com base no nível de dificuldade
 const getMissionsByDifficulty = (difficulty) => {
@@ -482,21 +483,26 @@ const getMissionsByDifficulty = (difficulty) => {
                     stages: [
                         {
                             displayMap: false,
-                            fallbackImage: oman_pace,
+                            fallbackImage: Eutrofizado1,
                             next: 1,
                             component: (
                                 <OnlyOneQuestion
-                                    questionText={"Oman is an amazing place, bursting with all kinds of life and beauty! Take a look at the image, can you spot that?"}
+                                    questionText={"Olhe esses peixes, o que você acha que aconteceu com eles? "}
                                     options={[
                                         {
                                             id: 'a',
-                                            text: "Nope",
-                                            explanation: "Take a closer look at all that green! You can spot different shades, from deep, dark green to bright, light green. These colors could be showing us a variety of phytoplankton species living in this area."
+                                            text: "Eles foram mortos por um predador. ",
+                                            explanation: "Boa tentativa, amiguinho! Mas não é isso... O exemplo dessa imagem trata-se sobre Eutrofização, que acabou afetando na vida dos peixes desse corpo d’agua."
                                         },
                                         {
                                             id: 'b',
-                                            text: 'Absolutely',
-                                            explanation: "You’ve got it! Those different shades of green, from the darkest to the lightest, likely point to a variety of phytoplankton species hanging out in this region."
+                                            text: 'Eles morreram pela poluição da água. ',
+                                            explanation: "Parabéns, você acertou! Esses peixes morreram pela poluição da água, porém, essa poluição é um processo chamado Eutrofização! Esse processo é quando a água tem tantos nutrientes que algas e ciano bactérias começam a se reproduzir de maneira irregular, e essa grande quantidade de seres na água gera uma escassez de oxigênio."
+                                        },
+                                        {
+                                            id: 'c',
+                                            text: 'Eles estão dormindo depois de nadar bastante.',
+                                            explanation: "Não é nada disso... Os peixes estão mortos! Isso tudo culpa da Eutrofização, que acabou com os peixes daquele lugar."
                                         },
                                     ]}
                                     correctAnswerId={null}
@@ -505,22 +511,27 @@ const getMissionsByDifficulty = (difficulty) => {
                             ),
                         },
                         {
-                            displayMap: true,
+                            displayMap: false,
                             fallbackImage: null,
                             next: 2,
                             component: (
                                 <OnlyOneQuestion
-                                    questionText={"This map helps us see the presence of phytoplankton in the oceans! We can get this data because they contain pigments like chlorophyll that absorb light at specific wavelengths. Look at the scale and explore the ocean around Oman a bit and search for them! Does the observed phytoplankton affect other species of animals?"}
+                                    questionText={" Então, com base na imagem explicativa acima, qual das alternativas seria a correta para explicar esse fenômeno? "}
                                     options={[
                                         {
                                             id: 'a',
-                                            text: "No",
-                                            explanation: "Look back at what we saw! Phytoplankton is super important; it’s the base of the food chain and helps keep the planet’s oxygen levels in check."
+                                            text: "As algas crescem demais, o oxigênio acaba e os peixes acabam morrendo. ",
+                                            explanation: "Bom raciocino explorador, que bom que está entendendo!"
                                         },
                                         {
                                             id: 'b',
-                                            text: 'Yes',
-                                            explanation: "You’re spot on! Phytoplankton plays a key role in the food chain and is essential for maintaining the planet's oxygen."
+                                            text: 'A água fica mais limpa e os peixes têm mais comida. ',
+                                            explanation: "Não é muito bem isso explorador... Muito Pelo contrário, a água está ficando cada vez mais suja!"
+                                        },
+                                        {
+                                            id: 'c',
+                                            text: 'O nível de oxigênio aumenta, ajudando todos os animais a respirarem melhor. ',
+                                            explanation: "Não meu explorador, o nível de oxigênio está diminuindo por conta do grande número de algas, isso causa a morte de vários outros seres, desde outros tipos de algas a até peixes grandes."
                                         },
                                     ]}
                                     correctAnswerId={null}
@@ -555,38 +566,24 @@ const getMissionsByDifficulty = (difficulty) => {
                             next: 4,
                             component: (
                                 <OnlyOneQuestion
-                                    questionText={"What do you think could happen if the numbers of phytoplankton start to drop?"}
+                                    questionText={"Como você já aprendeu, a Eutrofização acaba com a vida marinha. Na imagem a seguir você pode ver a chamada “Zona Morta” que fica no Golfo do México e está cada vez mais ficando maior... Como você acha que isso pode ser resolvido? "}
                                     options={[
                                         {
                                             id: 'a',
-                                            text: "Phytoplankton will turn into seaweed",
-                                            explanation: "Nope, that’s not how it works! Phytoplankton are tiny and different from seaweed, and they can’t just transform."
+                                            text: "Reduzir o uso de fertilizantes, cuidar melhor do lixo, melhora nas estações de saneamento básico e melhora no descarte de veículos velhos.  ",
+                                            explanation: "Belo conhecimento meu jovem! Ao usar menos fertilizantes e gerenciar melhor o lixo, evitamos que muitos nutrientes cheguem à água, ajudando a prevenir a eutrofização, até a prevenir a poluição."
                                         },
                                         {
                                             id: 'b',
-                                            text: 'The oceans will dry up',
-                                            explanation: "Nah, oceans might get warmer, but they won’t vanish!"
+                                            text: 'Jogar mais fertilizantes na água para alimentar os peixes. ',
+                                            explanation: "Que isso meu filho, calma! Jogar mais fertilizantes na água só aumentaria a quantidade de nutrientes e faria as algas crescerem ainda mais, piorando a situação. "
                                         },
                                         {
                                             id: 'c',
-                                            text: 'Phytoplankton will move to live on land',
-                                            explanation: "No way! These little guys are ocean dwellers—they can't pack up and move to the land like plants."
+                                            text: ' Construir mais fábricas perto do Golfo do México. ',
+                                            explanation: "Pô jovem, construir fábricas pode aumentar a poluição e o despejo de produtos químicos na água, contribuindo para a eutrofização e piorando a saúde do ecossistema. "
                                         },
-                                        {
-                                            id: 'd',
-                                            text: 'Fish will start producing their own food',
-                                            explanation: "Nope, fish can’t suddenly become chefs—they rely on what’s in the food chain!"
-                                        },
-                                        {
-                                            id: 'e',
-                                            text: 'Less food for marine life',
-                                            explanation: "Yep, if phytoplankton drop, sea creatures that rely on them might go hungry."
-                                        },
-                                        {
-                                            id: 'f',
-                                            text: 'Impact on oxygen levels',
-                                            explanation: "Correct! Phytoplankton help make oxygen, so fewer of them could affect the air we breathe."
-                                        },
+                                      
                                     ]}
                                     correctAnswerId={null}
                                     nextStage={4}
