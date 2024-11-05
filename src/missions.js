@@ -40,7 +40,6 @@ import TurtlePesca from './assets/oceandiving/mission1/tartarugapescafantasma.jp
 import FocaPesca from './assets/oceandiving/mission1/focapescafantasma.jpg';
 import CoraisPesca from './assets/oceandiving/mission1/coraisredefantasma.png';
 import Eutrofizado1 from './assets/oceandiving/mission3/eutrofizado02.jpg';
-import Geleira from './assets/oceandiving/mission4/img_introducao.jpg'
 
 
 
@@ -55,6 +54,7 @@ import Geleira from './assets/oceandiving/mission4/img_introducao.jpg'
 //pulei linhas pra não arriscar de dar erro depois. depois pode apagar
 import MapaAntartica from './assets/oceandiving/mission4/antartica_mapa.png';
 import GeloDerretendo from './assets/oceandiving/mission4/gelo_derretendo.jpg';
+import Geleira from './assets/oceandiving/mission4/img_introducao.jpg'
 
 // Função que retorna as missões com base no nível de dificuldade
 const getMissionsByDifficulty = (difficulty) => {
