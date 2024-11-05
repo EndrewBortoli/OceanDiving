@@ -52,10 +52,10 @@ import FotoCoralBonita from './assets/oceandiving/mission1/marbrasilcosta.jpg';
 
 
 
-
 //pulei linhas pra não arriscar de dar erro depois. depois pode apagar
 import MapaAntartica from './assets/oceandiving/mission4/antartica_mapa.png';
 import GeloDerretendo from './assets/oceandiving/mission4/gelo_derretendo.jpg';
+import Geleira from './assets/oceandiving/mission4/img_introducao.jpg'
 
 // Função que retorna as missões com base no nível de dificuldade
 const getMissionsByDifficulty = (difficulty) => {
@@ -668,10 +668,10 @@ const getMissionsByDifficulty = (difficulty) => {
                     lat: -68.2833,
                     lng: -4.76056,
                     location: "Antártica",
-                    image: mauritania,
+                    image: Geleira,
                     text: "Da primeira revolução mundial até hoje, as emissões de gases estufa foram apenas aumentado, assim como as temperaturas do oceanos. Isso é extremamente preocupante pois temperaturas desreguladas impactam negativamente em ecossistemas marinhos, qualidade de vida dos animais e podem também causar o aumento do nível do mar, outro problema grave que possui consequências catastróficas",
                     displayMap: true,
-                    fallbackImage: mauritania,
+                    fallbackImage: Geleira,
                     csvPath: omanData,
                     initialViewState: {
                         latitude: -68.2833,
