@@ -41,7 +41,7 @@ import FocaPesca from './assets/oceandiving/mission1/focapescafantasma.jpg';
 import CoraisPesca from './assets/oceandiving/mission1/coraisredefantasma.png';
 import Eutrofizado1 from './assets/oceandiving/mission3/eutrofizado02.jpg';
 import RedeFantasma from './assets/oceandiving/mission1/redefantasma.jpg';
-
+import FotoCoralBonita from './assets/oceandiving/mission1/marbrasilcosta.jpg';
 
 
 
@@ -193,16 +193,16 @@ const getMissionsByDifficulty = (difficulty) => {
 
                         {
                             displayMap: false,
-                            fallbackImage: pace_water,
+                            fallbackImage: FotoCoralBonita,
                             next: 5,
                             component: (
                                 <OnlyOneQuestion
-                                    questionText={"The blue is water as we can see, but what could be the green?"}
+                                    questionText={" Agora que você sabe o impacto da pesca fantasma, o que podemos fazer para ajudar a proteger a vida no oceano?"}
                                     options={[
-                                        { id: 'a', text: 'Algae', explanation: 'Totally! Let\'s look further' },
-                                        { id: 'b', text: 'Pollution', explanation: 'Not in this case! Pollution can look like many colors including green, however we would be able to identify it by other impacts in the environment, like flora and fauna dying and other disturbances' },
-                                        { id: 'c', text: 'Waste', explanation: 'Not in this case, although waste could be this color, we would be able to see its origin and it would negatively impact the environment around it' },
-                                        { id: 'd', text: 'A giant sea monster taking a bath', explanation: 'Fortunately, or unfortunately, no animals exist in our ocean that are that big and green, but the thought that this is a living being (a collection of them) is correct!' }
+                                        { id: 'a', text: ' Explorar e cuidar dos oceanos, evitando que redes e materiais sejam deixados no mar.', explanation: 'Isso mesmo, explorador! Explorar e proteger os oceanos ajuda a preservar a biodiversidade e proteger ecossistemas preciosos. Torne-se um ajudante do mundo e explore os mares!!  ' },
+                                        { id: 'b', text: 'Incentivar a limpeza dos mares e conscientizar outras pessoas sobre a importância da vida marinha.', explanation: 'Correto, explorador! Conscientizar e promover a limpeza dos mares é essencial para reduzir os impactos da pesca fantasma. Torne-se um ajudante do mundo e explore os mares!!' },
+                                        { id: 'c', text: ' Recolher materiais de pesca abandonados e incentivar o uso de alternativas 	mais seguras para a vida marinha. ', explanation: 'Certíssimo, explorador! Remover redes abandonadas e buscar alternativas seguras são ações importantes para preservar os ecossistemas. Torne-se um ajudante do mundo e explore os mares!! ' },
+                                        
                                     ]}
                                     correctAnswerId={'a'}
                                     nextStage={5}  // Ensure this links correctly
