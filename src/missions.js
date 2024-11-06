@@ -818,7 +818,7 @@ const getMissionsByDifficulty = (difficulty) => {
                             // essa questão aparece se selecionar a "b" da 3
                             displayMap: false,
                             fallbackImage: GeloDerretendo,
-                            next: 3,
+                            next: 4,
                             component: (
                                 <OnlyOneQuestion
                                     questionText={" Se os animais não sobreviverem, o ecossistema marinho se desordena. Consegue dizer o porquê?"}
@@ -835,7 +835,7 @@ const getMissionsByDifficulty = (difficulty) => {
                                         },
                                     ]}
                                     correctAnswerId={null}   
-                                    nextStage={3}
+                                    nextStage={4}
                                 />
                             ),
                         },
