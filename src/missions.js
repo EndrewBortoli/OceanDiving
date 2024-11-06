@@ -44,12 +44,9 @@ import RedeFantasma from './assets/oceandiving/mission1/redefantasma.jpg';
 import FotoCoralBonita from './assets/oceandiving/mission1/marbrasilcosta.jpg';
 import TartarugaNemo from './assets/oceandiving/mission1/tartaruganemo.jpg';
 import EcossistemaMarinho from './assets/oceandiving/mission1/ecossistemamarinho.jpg';
-
 import MapaEutro1 from './assets/oceandiving/mission3/eurotrificacaomapa1.webp';
 import LagoEutro from './assets/oceandiving/mission3/eutro.webp';
 import golfomexico2 from './assets/oceandiving/mission3/golfomexico2.jpg';
-
-
 import Corais from './assets/oceandiving/mission2/corais.jpg';
 import StartMission2 from './assets/oceandiving/mission2/acidificação main.jpg';
 import questao2 from './assets/oceandiving/mission2/image560x340cropped.jpg';
@@ -58,6 +55,12 @@ import pescaartesanal from './assets/oceandiving/mission2/pescaartesanal.jpg';
 import carrinhofumaça from './assets/oceandiving/mission2/carro-soltando-fumaça-preta.png';
 import industria from './assets/oceandiving/mission2/efeito-estufa.jpg';
 import longbeach from './assets/oceandiving/mission2/long-beach.jpg';
+import TemperaturaAumentando from './assets/oceandiving/mission4/temperaturas_aumentando.webp'
+
+
+
+import EmblemaCongrats from './assets/emblematartarugacongrats.jpg';
+import EmblemaInicio from './assets/emblemainicio.jpg';
 
 //pulei linhas pra não arriscar de dar erro depois. depois pode apagar
 import MapaAntartica from './assets/oceandiving/mission4/antartica_mapa.png';
@@ -236,25 +239,7 @@ const getMissionsByDifficulty = (difficulty) => {
                                 </InformativeSectionStage>
                             ),
                         },
-                        {
-                            displayMap: true,
-                            next: 7,
-                            component: (
-                                <MapFocusStage nextStage={7} // Make sure the progression continues logically
-                                    images={[
-                                        {
-                                            lat: 42.81671,
-                                            lng: -69.95354,
-                                            image: FocaPesca,
-                                            title: "Olá, explorador!",
-                                            text: "Agora você sabe os riscos da pesca fantasma! Espero que tenha se divetido! ",
-                                            zoom: 7,
-                                        }
-                                    ]}
-                                />
-                            ),
-                        },
-
+                       
                         {
                             displayMap: true,
                             component: <FinalStage
@@ -743,7 +728,7 @@ const getMissionsByDifficulty = (difficulty) => {
                         {
                             // essa questão aparece se selecionar a "a" da 3
                             displayMap: false,
-                            fallbackImage: GeloDerretendo,
+                            fallbackImage: TemperaturaAumentando,
                             next: 3,
                             component: (
                                 <OnlyOneQuestion
@@ -772,7 +757,7 @@ const getMissionsByDifficulty = (difficulty) => {
                         {
                             // essa questão aparece se selecionar a "b" da 3
                             displayMap: false,
-                            fallbackImage: GeloDerretendo,
+                            fallbackImage: TemperaturaAumentando,
                             next: 3,
                             component: (
                                 <OnlyOneQuestion
