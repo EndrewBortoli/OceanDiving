@@ -59,7 +59,6 @@ import agua from './assets/oceandiving/mission2/iStock-822555200.webp';
 import pexe from './assets/oceandiving/mission2/pexe.jpg';
 import TemperaturaAumentando from './assets/oceandiving/mission4/temperaturas_aumentando.webp';
 import EmblemaSubmerged from './assets/emblemasubmerged.jpg';
-import TemperaturaAumentando from './assets/oceandiving/mission4/temperaturas_aumentando.webp'
 
 
 
