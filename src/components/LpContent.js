@@ -7,9 +7,9 @@ import logo from '../assets/logooceanspace.png';
 
 const LpContent = ({ setDifficulty }) => {
   const options = [
-    { label: "EASY", text: "Satellite Scout", image: easyImage },
-    { label: "MEDIUM", text: "Data Detective", image: mediumImage },
-    { label: "HARD", text: "Geo-Wizard", image: hardImage },
+    { label: "EASY", text: "Explorador", image: easyImage },
+    { label: "MEDIUM", text: "Detetive", image: mediumImage },
+    { label: "HARD", text: "Engenheiro", image: hardImage },
   ];
   const [currentIndex, setCurrentIndex] = useState(1); // Start at "MEDIUM"
 
@@ -24,7 +24,7 @@ const LpContent = ({ setDifficulty }) => {
       <h1>OCEANDIVING</h1>
       <p className="text">
         Bem-vindo ao mundo da exploração subaquática, explorador! Você foi selecionado para participar do programa <strong>OCEAN DIVING</strong>, onde realizará missões incríveis nos oceanos de todo o planeta. Sua tarefa será explorar as profundezas do mar e gerar relatórios detalhados sobre fenômenos monitorados por tecnologias de sensoriamento remoto.        </p>
-      <h6>Pick difficulty</h6>
+      <h6>Selecione a dificuldade:</h6>
 
       <div className="image-selection">
         {options.map((option, index) => (
