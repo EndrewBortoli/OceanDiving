@@ -522,7 +522,7 @@ const getMissionsByDifficulty = (difficulty) => {
                         {
                             displayMap: false,
                             fallbackImage: null,
-                            next: 5,
+                            next: 2,
                             component: (
                                 <InformativeSectionStage nextStage={5}>
                                     <div className="mission-card-header">
@@ -543,7 +543,7 @@ const getMissionsByDifficulty = (difficulty) => {
                         {
                             displayMap: false,
                             fallbackImage: LagoEutro,
-                            next: 2,
+                            next: 3,
                             component: (
                                 <OnlyOneQuestion
                                     questionText={" Então, com base na imagem explicativa acima, qual das alternativas seria a correta para explicar esse fenômeno? "}
@@ -565,7 +565,7 @@ const getMissionsByDifficulty = (difficulty) => {
                                         },
                                     ]}
                                     correctAnswerId={null}
-                                    nextStage={2}
+                                    nextStage={3}
                                 />
                             ),
                         },
