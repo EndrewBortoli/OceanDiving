@@ -14,11 +14,6 @@ import bloom from '../assets/badges/bloom.png';
 import cyano from '../assets/badges/cyano.png';
 import mudMistery from '../assets/badges/mud-mistery.png';
 import springs from '../assets/badges/springs.png';
-import waterNormalsTexture from '../assets/waternormals.jpeg';
-import eutrofização from
-import aumentoTemperatura from
-import acidificação from 
-import pescaFantasma from 
 import geral from '../assets/badges/badge_geral.jpg';
 
 extend({ Water });
