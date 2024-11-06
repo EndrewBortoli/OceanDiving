@@ -51,11 +51,11 @@ import TartarugaNemo from './assets/oceandiving/mission1/tartaruganemo.jpg'
 
 
 
-
 //pulei linhas pra não arriscar de dar erro depois. depois pode apagar
 import MapaAntartica from './assets/oceandiving/mission4/antartica_mapa.png';
 import GeloDerretendo from './assets/oceandiving/mission4/gelo_derretendo.jpg';
-import Geleira from './assets/oceandiving/mission4/img_introducao.jpg'
+import Geleira from './assets/oceandiving/mission4/img_introducao.jpg';
+import { a } from 'framer-motion/client';
 
 // Função que retorna as missões com base no nível de dificuldade
 const getMissionsByDifficulty = (difficulty) => {
@@ -469,7 +469,7 @@ const getMissionsByDifficulty = (difficulty) => {
                     location: "Golfo do México",
                     image: GolfeDoMexico,
                     text: "O Golfo do México é uma vasta bacia oceânica localizada entre a América do Norte e a América Central, sendo considerado o maior golfo do mundo. Ele cobre uma área de aproximadamente 1,5 milhões de km² e possui um volume de cerca de 2.400 mil km³. Suas águas banham os Estados Unidos, incluindo estados como Flórida, Alabama, Mississippi, Louisiana e Texas; o México, com estados como Tamaulipas e Veracruz; e, a ilha de Cuba. ",
-                    displayMap: true,
+                    displayMap: false,
                     fallbackImage: oman_pace,
                     csvPath: omanData,
                     initialViewState: {
@@ -583,7 +583,7 @@ const getMissionsByDifficulty = (difficulty) => {
                             ),
                         },
                         {
-                            displayMap: true,
+                            displayMap: false,
                             fallbackImage: null,
                             next: 4,
                             component: (
@@ -636,13 +636,42 @@ const getMissionsByDifficulty = (difficulty) => {
                                         }
                                         
                                     ]}
-                                    correctAnswerId={null}
+                            
+                                        correctAnswerId={null}
                                     nextStage={5}
                                 />
                             ),
                         },
+                        displayMap: false,
+                        fallbackImage: Eutrofizado1,
+                        next: 6,
+                        component: (
+                            <OnlyOneQuestion
+                                questionText={"Olhe esses peixes, o que você acha que aconteceu com eles? "}
+                                options={[
+                                    {
+                                        id: 'a',
+                                        text: "Eles foram mortos por um predador. ",
+                                        explanation: "Boa tentativa, amiguinho! Mas não é isso... O exemplo dessa imagem trata-se sobre Eutrofização, que acabou afetando na vida dos peixes desse corpo d’agua."
+                                    },
+                                    {
+                                        id: 'b',
+                                        text: 'Eles morreram pela poluição da água. ',
+                                        explanation: "Parabéns, você acertou! Esses peixes morreram pela poluição da água, porém, essa poluição é um processo chamado Eutrofização! Esse processo é quando a água tem tantos nutrientes que algas e ciano bactérias começam a se reproduzir de maneira irregular, e essa grande quantidade de seres na água gera uma escassez de oxigênio."
+                                    },
+                                    {
+                                        id: 'c',
+                                        text: 'Eles estão dormindo depois de nadar bastante.',
+                                        explanation: "Não é nada disso... Os peixes estão mortos! Isso tudo culpa da Eutrofização, que acabou com os peixes daquele lugar."
+                                    },
+                                ]}
+                                correctAnswerId={null}
+                                nextStage={6}
+                            />
+                        ),
+                    },
                         {
-                            displayMap: true,
+                            displayMap: false,
                             component: (
                                 <FinalStage
                                     onArrival={() => console.log('Final stage reached!')}
