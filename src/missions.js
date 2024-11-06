@@ -55,7 +55,10 @@ import pescaartesanal from './assets/oceandiving/mission2/pescaartesanal.jpg';
 import carrinhofumaça from './assets/oceandiving/mission2/carro-soltando-fumaça-preta.png';
 import industria from './assets/oceandiving/mission2/efeito-estufa.jpg';
 import longbeach from './assets/oceandiving/mission2/long-beach.jpg';
-import TemperaturaAumentando from './assets/oceandiving/mission4/temperaturas_aumentando.webp'
+import agua from './assets/oceandiving/mission2/iStock-822555200.webp';
+import pexe from './assets/oceandiving/mission2/pexe.jpg';
+import TemperaturaAumentando from './assets/oceandiving/mission4/temperaturas_aumentando.webp';
+import EmblemaSubmerged from './assets/emblemasubmerged.jpg';
 
 
 
