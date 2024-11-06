@@ -779,7 +779,7 @@ const getMissionsByDifficulty = (difficulty) => {
                             // essa questão aparece se selecionar a "b" da 3
                             displayMap: false,
                             fallbackImage: TemperaturaAumentando,
-                            next: 3,
+                            next: 4,
                             component: (
                                 <OnlyOneQuestion
                                     questionText={"Com as mudanças climáticas, os ecossistemas marinhos se desordenam. Consegue dizer o porquê?"}
@@ -800,7 +800,7 @@ const getMissionsByDifficulty = (difficulty) => {
                                         },
                                     ]}
                                     correctAnswerId={null}   
-                                    nextStage={3}
+                                    nextStage={4}
                                 />
                             ),
                         },
@@ -808,7 +808,7 @@ const getMissionsByDifficulty = (difficulty) => {
                             // essa questão aparece se selecionar a "b" da 3
                             displayMap: false,
                             fallbackImage: GeloDerretendo,
-                            next: 4,
+                            next: 5,
                             component: (
                                 <OnlyOneQuestion
                                     questionText={" Se os animais não sobreviverem, o ecossistema marinho se desordena. Consegue dizer o porquê?"}
@@ -825,7 +825,7 @@ const getMissionsByDifficulty = (difficulty) => {
                                         },
                                     ]}
                                     correctAnswerId={null}   
-                                    nextStage={4}
+                                    nextStage={5}
                                 />
                             ),
                         },
