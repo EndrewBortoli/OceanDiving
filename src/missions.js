@@ -227,7 +227,7 @@ const getMissionsByDifficulty = (difficulty) => {
                                         <h4>Você pode fazer a diferença!</h4>
                                     </div>
                                     <div className="image-container">
-                                        <img src={phytoplankton}></img>
+                                        <img src={TartarugaNemo}></img>
                                     </div>
                                     <div className="text">
                                         <p>
