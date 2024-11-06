@@ -42,7 +42,7 @@ import CoraisPesca from './assets/oceandiving/mission1/coraisredefantasma.png';
 import Eutrofizado1 from './assets/oceandiving/mission3/eutrofizado02.jpg';
 import RedeFantasma from './assets/oceandiving/mission1/redefantasma.jpg';
 import FotoCoralBonita from './assets/oceandiving/mission1/marbrasilcosta.jpg';
-
+import TartarugaNemo from './assets/oceandiving/mission1/tartaruganemo.jpg'
 
 
 
@@ -216,11 +216,11 @@ const getMissionsByDifficulty = (difficulty) => {
                             component: (
                                 <InformativeSectionStage nextStage={6}> {/* Update nextStage properly */}
                                     <div className="mission-card-header">
-                                        <h2>The answer is: Algae</h2>
-                                        <h4>Here's some quick facts about it!</h4>
+                                        <h2>CUIDE DO NOSSO ECOSSISTEMA!</h2>
+                                        
                                     </div>
                                     <div className="image-container">
-                                        <img src={phytoplankton}></img>
+                                        <img src={TartarugaNemo}></img>
                                     </div>
                                     <div className="text">
                                         <p>Phytoplankton are like tiny algae that live in the ocean, lakes, and rivers. Even though they're super small, they’re really important because they make food from sunlight, just like plants in a garden! They also give off oxygen, which helps animals (and us!) breathe. You can think of them as the ocean’s little helpers, keeping everything healthy and full of life!
@@ -231,7 +231,8 @@ const getMissionsByDifficulty = (difficulty) => {
                             ),
                         },
                         {
-                            displayMap: true,
+                            displayMap: false,
+                            fallbackImage: CostaBrasileira,
                             next: 7,
                             component: (
                                 <MapFocusStage nextStage={7} // Make sure the progression continues logically
@@ -239,9 +240,9 @@ const getMissionsByDifficulty = (difficulty) => {
                                         {
                                             lat: 42.81671,
                                             lng: -69.95354,
-                                            image: maine_to_george,
-                                            title: "This is the coast we were looking at!",
-                                            text: "With the satellite image we could see all its beauty!",
+                                            image: RedeFantasma,
+                                            title: "PARABÉNS, VOCÊ FOI MUITO BEM!",
+                                            text: "Agora você sabe os riscos da pesca fantasma! ",
                                             zoom: 7,
                                         }
                                     ]}
