@@ -44,9 +44,17 @@ import RedeFantasma from './assets/oceandiving/mission1/redefantasma.jpg';
 import FotoCoralBonita from './assets/oceandiving/mission1/marbrasilcosta.jpg';
 import TartarugaNemo from './assets/oceandiving/mission1/tartaruganemo.jpg';
 import EcossistemaMarinho from './assets/oceandiving/mission1/ecossistemamarinho.jpg';
+
 import MapaEutro1 from './assets/oceandiving/mission3/eurotrificacaomapa1.webp';
 import LagoEutro from './assets/oceandiving/mission3/eutro.webp';
 import golfomexico2 from './assets/oceandiving/mission3/golfomexico2.jpg';
+import zonamorta from './assets/oceandiving/mission3/zonamorta mapa.webp';
+import lagoeutro2 from './assets/oceandiving/mission3/lagoeutro2.jpg';
+import mapaeutro2 from './assets/oceandiving/mission3/eutromapa2.png';
+import mapazonamortamex from './assets/oceandiving/mission3/zonamortamex2.png';
+import golfmex2 from './assets/oceandiving/mission3/golfomex2.webp';
+import golfmex3 from './assets/oceandiving/mission3/golfomex3.jpg';
+
 import Corais from './assets/oceandiving/mission2/corais.jpg';
 import StartMission2 from './assets/oceandiving/mission2/acidificação main.jpg';
 import questao2 from './assets/oceandiving/mission2/image560x340cropped.jpg';
@@ -55,6 +63,7 @@ import pescaartesanal from './assets/oceandiving/mission2/pescaartesanal.jpg';
 import carrinhofumaça from './assets/oceandiving/mission2/carro-soltando-fumaça-preta.png';
 import industria from './assets/oceandiving/mission2/efeito-estufa.jpg';
 import longbeach from './assets/oceandiving/mission2/long-beach.jpg';
+<<<<<<< Updated upstream
 import agua from './assets/oceandiving/mission2/iStock-822555200.webp';
 import pexe from './assets/oceandiving/mission2/pexe.jpg';
 import TemperaturaAumentando from './assets/oceandiving/mission4/temperaturas_aumentando.webp';
@@ -63,6 +72,8 @@ import EmblemaSubmerged from './assets/emblemasubmerged.jpg';
 
 
 import EmblemaCongrats from './assets/emblematartarugacongrats.jpg';
+=======
+>>>>>>> Stashed changes
 
 //pulei linhas pra não arriscar de dar erro depois. depois pode apagar
 import MapaAntartica from './assets/oceandiving/mission4/antartica_mapa.png';
@@ -241,7 +252,25 @@ const getMissionsByDifficulty = (difficulty) => {
                                 </InformativeSectionStage>
                             ),
                         },
-                       
+                        {
+                            displayMap: true,
+                            next: 7,
+                            component: (
+                                <MapFocusStage nextStage={7} // Make sure the progression continues logically
+                                    images={[
+                                        {
+                                            lat: 42.81671,
+                                            lng: -69.95354,
+                                            image: FocaPesca,
+                                            title: "Olá, explorador!",
+                                            text: "Agora você sabe os riscos da pesca fantasma! Espero que tenha se divetido! ",
+                                            zoom: 7,
+                                        }
+                                    ]}
+                                />
+                            ),
+                        },
+
                         {
                             displayMap: true,
                             component: <FinalStage
@@ -410,7 +439,7 @@ const getMissionsByDifficulty = (difficulty) => {
                             ),
                         },
                         {
-                            displayMap: true,
+                            displayMap: false,
                             next: 7,
                             component: (
                                 <MapFocusStage nextStage={7}
@@ -437,7 +466,7 @@ const getMissionsByDifficulty = (difficulty) => {
                                         location: "Long Beach, Nova Iorque, EUA",
                                         image: saginaw_bay,
                                         report: "Muito bem! Graças à sua ajuda, descobrimos o que está acontecendo em Long Beach com todos esses problemas resultando na acidificação dos oceanos e começamos a pensar em maneiras inteligentes de consertar isso!",
-                                        reportAll: "Com todas essas perguntas e explicações, você aprendeu como o dióxido de carbono afeta os oceanos, como a pesca esportiva e a pesca fantasma impactam a vida marinha, e por que é tão importante cuidar do nosso planeta. Além disso, aprendeu sobre o impacto da pesca esportiva e da pesca fantasma, que causam grandes danos à biodiversidade, ameaçando várias espécies e comprometendo o equilíbrio dos ecossistemas. Esses temas mostram a importância de cuidarmos do nosso planeta, já que o oceano é essencial para a saúde do planeta e de todos nós. Entender essas questões e conscientizar outras pessoas são passos fundamentais para preservar nossos mares e suas riquezas naturais. Cada ação, por menor que pareça, contribui para a proteção dos ecossistemas e para o bem-estar de toda a biodiversidade marinha, e agora, você sabe mais sobre como proteger os oceanos. Continue assim!"
+                                        reportAll: "Com todas essas perguntas e explicações, você aprendeu como o dióxido de carbono afeta os oceanos, como a pesca esportiva e a pesca fantasma impactam a vida marinha, e por que é tão importante cuidar do nosso planeta. Entender esses temas ajuda a proteger os ecossistemas e a biodiversidade marinha. Cada ação conta, e agora você sabe mais sobre como proteger os oceanos. Continue assim!"
                                     }}
                                     badge={{
                                         name: "Emblema Acidificação dos Oceanos",
@@ -523,16 +552,16 @@ const getMissionsByDifficulty = (difficulty) => {
                         },
                         {
                             displayMap: false,
-                            fallbackImage: null,
+                            fallbackImage: lagoeutro2,
                             next: 2,
                             component: (
-                                <InformativeSectionStage nextStage={5}>
+                                <InformativeSectionStage nextStage={2}>
                                     <div className="mission-card-header">
-                                        <h2>Analise e entenda a imagem a seguir para responder a próxima pergunta.</h2>
+                                        <h2>Analise e entenda a imagem a seguir</h2>
                                         <p></p>
                                     </div>
                                     <div className="image-container">
-                                        <img src={MapaEutro1}></img>
+                                        <img src={mapaeutro2}></img>
                                     </div>
                                     <div className="text">
                                         <p>
@@ -548,22 +577,22 @@ const getMissionsByDifficulty = (difficulty) => {
                             next: 3,
                             component: (
                                 <OnlyOneQuestion
-                                    questionText={" Então, com base na imagem explicativa acima, qual das alternativas seria a correta para explicar esse fenômeno? "}
+                                    questionText={" Então, resumidamente, o que é Eutrofização?  "}
                                     options={[
                                         {
                                             id: 'a',
-                                            text: "As algas crescem demais, o oxigênio acaba e os peixes acabam morrendo. ",
-                                            explanation: "Bom raciocino explorador, que bom que está entendendo!"
+                                            text: " É o processo de reprodução de uma alga que come peixes.  ",
+                                            explanation: " Calma jovem, as algas não comem peixes. O problema é que elas crescem demais e consomem o oxigênio da água, o que prejudica os peixes e outros seres. "
                                         },
                                         {
                                             id: 'b',
-                                            text: 'A água fica mais limpa e os peixes têm mais comida. ',
-                                            explanation: "Não é muito bem isso explorador... Muito Pelo contrário, a água está ficando cada vez mais suja!"
+                                            text: 'É um processo que libera oxigênio na água.  ',
+                                            explanation: " Essa opção está incorreta, explorador. A eutrofização, na verdade, reduz o oxigênio na água, pois as algas usam muito oxigênio para crescer, deixando pouco para os outros seres vivos. "
                                         },
                                         {
                                             id: 'c',
-                                            text: 'O nível de oxigênio aumenta, ajudando todos os animais a respirarem melhor. ',
-                                            explanation: "Não meu explorador, o nível de oxigênio está diminuindo por conta do grande número de algas, isso causa a morte de vários outros seres, desde outros tipos de algas a até peixes grandes."
+                                            text: ' É um processo que causa a morte de fauna e flora em um corpo d’agua, pois o excesso de algas e cianobactérias na água gera um menor nível de oxigenação, assim levando seres a morte.  ',
+                                            explanation: " Parabéns, você acertou em cheio, meu caro! "
                                         },
                                     ]}
                                     correctAnswerId={null}
@@ -574,7 +603,7 @@ const getMissionsByDifficulty = (difficulty) => {
                        
                         {
                             displayMap: false,
-                            fallbackImage: golfomexico2,
+                            fallbackImage: mapazonamortamex,
                             next: 4,
                             component: (
                                 <OnlyOneQuestion
@@ -588,12 +617,12 @@ const getMissionsByDifficulty = (difficulty) => {
                                         {
                                             id: 'b',
                                             text: 'Jogar mais fertilizantes na água para alimentar os peixes. ',
-                                            explanation: "Que isso meu filho, calma! Jogar mais fertilizantes na água só aumentaria a quantidade de nutrientes e faria as algas crescerem ainda mais, piorando a situação. "
+                                            explanation: "Que isso, explorador, calma! Jogar mais fertilizantes na água só aumentaria a quantidade de nutrientes e faria as algas crescerem ainda mais, piorando a situação. "
                                         },
                                         {
                                             id: 'c',
                                             text: ' Construir mais fábricas perto do Golfo do México. ',
-                                            explanation: "Pô jovem, construir fábricas pode aumentar a poluição e o despejo de produtos químicos na água, contribuindo para a eutrofização e piorando a saúde do ecossistema. "
+                                            explanation: "Jovem, construir fábricas pode aumentar a poluição e o despejo de produtos químicos na água, contribuindo para a eutrofização e piorando a saúde do ecossistema. "
                                         },
                                       
                                     ]}
@@ -604,7 +633,7 @@ const getMissionsByDifficulty = (difficulty) => {
                         },
                         {
                             displayMap: false,
-                            fallbackImage: image_globe,
+                            fallbackImage: golfmex2,
                             next: 5,
                             component: (
                                 <OnlyOneQuestion
@@ -637,14 +666,14 @@ const getMissionsByDifficulty = (difficulty) => {
                                 <FinalStage
                                     onArrival={() => console.log('Final stage reached!')}
                                     briefing={{
-                                        title: "Hidden Springs, Hidden Secrets",
-                                        location: "Oman",
+                                        title: "Eutrofização no Golfo do México",
+                                        location: "Golfo do México",
                                         image: oman_picture,
                                         report: "Woohoo! We did it! We figured out how to tell phytoplankton apart and went even further, chatting about just how important they are. Plus, we explored how their disappearance could impact not just the region, but the entire planet! What an adventure!.",
-                                        reportAll: "We’ve seen how it’s way smarter to act before a problem pops up, but when things do go wrong, we can’t just sit back. In today’s example, we talked about mud, but oil spills are a whole other story. They can be even nastier, sticking around much longer and causing bigger damage to marine life. Oil doesn’t just muddy the water, it coats everything, from fish to birds, making it hard for ecosystems to bounce back. The cool thing about using images is that they don’t just show us what’s happening, they give us clues about what might happen next! They help us track where the mud, oil, or any other mess is headed. With that info, we can figure out which areas might be in trouble and jump in with protective measures. Whether it’s blocking the spill, setting up barriers, or getting cleanup crews to the right spot, these images are like treasure maps showing us the best path to take. And even after the initial cleanup, we can keep an eye on things. Satellite images and other tools let us monitor how nature is recovering and make sure it gets back to its full strength. By acting early, responding quickly, and using tech to guide us, we can help protect our bays, rivers, and oceans from the messes that threaten the"
+                                        reportAll: "Parabéns, explorador! 🎉 Você concluiu essa missão sobre a eutrofização no Golfo do México, desvendando causas, consequências e soluções para esse grave problema ambiental. Ao longo dessa jornada, você ganhou novos aprendizados sobre a importância de proteger nossos recursos hídricos e o impacto da ação humana nos ecossistemas marinhos. Agora, você é um verdadeiro defensor da saúde do Golfo e do equilíbrio ecológico! 🐟🌊"
                                     }}
                                     badge={{
-                                        name: "Hidden Springs, Hidden Secrets Mission Emblem",
+                                        name: "Eutrofização no Golfo do México",
                                         image: badgeFigure
                                     }}
                                 />
@@ -751,7 +780,7 @@ const getMissionsByDifficulty = (difficulty) => {
                         {
                             // essa questão aparece se selecionar a "a" da 3
                             displayMap: false,
-                            fallbackImage: TemperaturaAumentando,
+                            fallbackImage: GeloDerretendo,
                             next: 3,
                             component: (
                                 <OnlyOneQuestion
@@ -780,8 +809,13 @@ const getMissionsByDifficulty = (difficulty) => {
                         {
                             // essa questão aparece se selecionar a "b" da 3
                             displayMap: false,
+<<<<<<< Updated upstream
                             fallbackImage: TemperaturaAumentando,
                             next: 4,
+=======
+                            fallbackImage: GeloDerretendo,
+                            next: 3,
+>>>>>>> Stashed changes
                             component: (
                                 <OnlyOneQuestion
                                     questionText={"Com as mudanças climáticas, os ecossistemas marinhos se desordenam. Consegue dizer o porquê?"}
