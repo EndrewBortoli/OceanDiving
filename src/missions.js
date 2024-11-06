@@ -46,10 +46,10 @@ import Corais from './assets/oceandiving/mission2/corais.jpg';
 import StartMission2 from './assets/oceandiving/mission2/acidificação main.jpg';
 import questao2 from './assets/oceandiving/mission2/image560x340cropped.jpg';
 import pescaesportiva from './assets/oceandiving/mission2/pesca esportiva.jpg';
-
-
-
-
+import pescaartesanal from './assets/oceandiving/mission2/pescaartesanal.jpg';
+import carrinhofumaça from './assets/oceandiving/mission2/carro-soltando-fumaça-preta.png';
+import industria from './assets/oceandiving/mission2/efeito-estufa.jpg';
+import longbeach from './assets/oceandiving/mission2/long-beach.jpg';
 
 //pulei linhas pra não arriscar de dar erro depois. depois pode apagar
 import MapaAntartica from './assets/oceandiving/mission4/antartica_mapa.png';
@@ -335,7 +335,7 @@ const getMissionsByDifficulty = (difficulty) => {
                                 <OnlyOneQuestion
                                     questionText={"Qual é uma das causas da acidificação dos oceanos?"}
                                     options={[
-                                        { id: 'a', text: 'A redução da pesca nos oceanos.', explanation: 'Não é isso... A redução da pesca pode ajudar os oceanos, mas o que realmente causa a acidificação é o excesso de dióxido de carbono (Co2) no ar.' },
+                                        { id: 'a', text: 'A redução da pesca nos oceanos.', explanation: 'Não é isso... A redução da pesca pode ajudar os oceanos, mas o que realmente causa a acidificação é o excesso de dióxido de carbono (CO2) no ar.' },
                                         { id: 'b', text: 'O aumento de dióxido de carbono (Co2) na atmosfera.', explanation: 'Correto! O excesso de dióxido de carbono no ar é uma das principais causas da acidificação dos oceanos.' },
                                         { id: 'c', text: 'A limpeza frequente das praias.', explanation: 'Na verdade, limpar as praias ajuda o oceano! O que causa a acidificação é o aumento do dióxido de carbono na atmosfera.'}
                                     ]}
@@ -346,15 +346,15 @@ const getMissionsByDifficulty = (difficulty) => {
                         },
                         {
                             displayMap: false,
-                            fallbackImage: pescaesportiva,
+                            fallbackImage: pescaartesanal,
                             next: 3,
                             component: (
                                 <OnlyOneQuestion
                                     questionText={"O que é a pesca?"}
                                     options={[
-                                        { id: 'a', text: 'A pesca é a limpeza do lixo no mar, que ajuda a proteger os oceanos.', explanation: 'Não, a pesca esportiva não ajuda a aumentar a quantidade de peixes. Se pegarmos muitos, podemos deixar os peixes em perigo e até fazer algumas espécies sumirem!' },
-                                        { id: 'b', text: 'A pesca é a captura de peixes e outros animais do mar, e pode afetar o equilíbrio dos ecossistemas marinhos.', explanation: 'Pescar em recifes pode machucar os corais! Se tirarmos muitos peixes importantes, os recifes podem ficar doentes e perder sua beleza e vida.' },
-                                        { id: 'c', text: 'A pesca é a criação de peixes em tanques, que não tem impacto nos oceanos.', explanation: 'Isso mesmo! A Pesca esportiva pode deixar os ecossistemas marinhos mais fracos... Se não cuidarmos bem, algumas espécies podem desaparecer, e isso afeta toda a vida no mar, tornando tudo mais frágil.' },
+                                        { id: 'a', text: 'A pesca é a limpeza do lixo no mar, que ajuda a proteger os oceanos.', explanation: 'Não... A pesca é a captura de peixes, não a limpeza dos oceanos.' },
+                                        { id: 'b', text: 'A pesca é a captura de peixes e outros animais do mar, e pode afetar o equilíbrio dos ecossistemas marinhos.', explanation: 'Correto! A pesca envolve a captura de peixes e, se não for bem controlada, pode prejudicar o equilíbrio natural dos oceanos.' },
+                                        { id: 'c', text: 'A pesca é a criação de peixes em tanques, que não tem impacto nos oceanos.', explanation: 'Não é isso! A pesca é a captura de peixes do mar e pode afetar os ecossistemas marinhos.' },
                                     ]}
                                     correctAnswerId={null}
                                     nextStage={3}
@@ -379,39 +379,36 @@ const getMissionsByDifficulty = (difficulty) => {
                             ),
                         },
                         {
-                            displayMap: true,
-                            fallbackImage: mud_spill,
+                            displayMap: false,
+                            fallbackImage: industria,
                             next: 5,
                             component: (
                                 <InformativeSectionStage nextStage={5}>
                                     <div className="mission-card-header">
-                                        <h2>Mud flows</h2>
-                                        <h4>This map shows the light reflection of the water! Bigger particles, like mud, can really affect it, that could be the reason behind the patterns we observe in the map! </h4>
+                                        <h2>O efeito estufa</h2>
+                                        <p>Com todo esse estudo, concluímos que a acidificação dos oceanos é um perigo! E como uma de suas causas, temos o efeito estufa que é um problemão também! Ele acontece quando alguns gases, como o dióxido de carbono (CO₂), ficam presos na atmosfera e deixam a Terra mais quente. Só que quando tem CO₂ demais, não é só o ar que sofre — os oceanos também!</p>
                                     </div>
                                     <div className="image-container">
-                                        <img src={mud_spill_rebuilding}></img>
+                                        <img src={carrinhofumaça}></img>
                                     </div>
                                     <div className="text">
-                                        <p>When all this mud enters the water, it stirs up the ecosystem. The water gets murky, making it hard for sunlight to reach the bottom. Without enough sunlight, the plants and algae that need it for energy can’t do their job, and eventually, they start to die off. These algae are super important because they’re at the base of the food chain, feeding fish, crustaceans, and lots of other creatures.
-                                            But that’s not all. All that mud also brings a load of organic matter with it. As this matter breaks down, it uses up the oxygen in the water. This can cause hypoxia, which is a fancy way of saying there’s not enough oxygen for fish and other animals to breathe. Without oxygen, many of them might not survive. So, this big muddy mess can throw off the whole balance of the bay, making it tough for the creatures that call it home.
+                                        <p>Esse gás, podendo ser emitido com a queima de combustíveis fósseis, desmatamento e até mesmo processos industriais acaba sendo absorvido pela água do mar e deixa ela mais ácida. Isso pode machucar os animais e plantas que vivem no oceano, prejudicando a biodiversidade marinha. Com o tempo, esse processo pode até fazer com que algumas espécies desapareçam, mudando o equilíbrio dos oceanos e impactando todo o planeta! E aí, prontos para a última pergunta?
                                         </p>
                                     </div>
                                 </InformativeSectionStage>
                             ),
                         },
                         {
-                            displayMap: true,
-                            fallbackImage: mud_spill_rebuilding,
+                            displayMap: false,
+                            fallbackImage: industria,
                             next: 6,
                             component: (
                                 <OnlyOneQuestion
-                                    questionText={"How can we solve this problem?"}
+                                    questionText={"Como o aumento do dióxido de carbono (CO2) na atmosfera afeta o clima?"}
                                     options={[
-                                        { id: 'a', text: "There is nothing to be done", explanation: "Come on, don’t be so gloomy! There’s always something we can do! Let’s head back and think again." },
-                                        { id: 'b', text: 'Stop the mud', explanation: "Stopping the mud completely is a tall order and pretty costly too. The real trick is to focus on making sure this doesn’t happen again in the future." },
-                                        { id: 'c', text: 'Invent a method that does not yet exist', explanation: "I love your creativity! New ideas are always welcome, and who knows what we’ll discover in the future. For now, though, we need to take steps to stop the problem from getting worse and, of course, prevent it from happening again." },
-                                        { id: 'd', text: 'Take measures to prevent it from happening again', explanation: "Exactly! Preventive measures are the way to go if we want to stop this from becoming a recurring issue." },
-                                        { id: 'e', text: 'Take palliative measures (measures to reduce the damage we cannot prevent)', explanation: "Palliative measures are helpful for sure. Whether it’s temporary barriers or other strategies, they can provide some relief in the short term." },
+                                        { id: 'a', text: "Diminui a quantidade de chuva.", explanation: "Não é bem isso... O aumento do dióxido de carbono não diminui a quantidade de chuva diretamente. Então, pode causar sim mudanças nos padrões de precipitação levando a mais chuvas em algumas regiões e secas em outras. Assim, o impacto no clima é complexo!" },
+                                        { id: 'b', text: 'Contribui para o aquecimento global.', explanation: "Boa! O aumento do dióxido de carbono faz com que mais calor fique preso na atmosfera, resultando em temperaturas mais altas e mudanças climáticas. Isso pode causar eventos climáticos extremos, como secas e tempestades fortes!" },
+                                        { id: 'c', text: 'Ajuda a manter a temperatura da Terra estável.', explanation: "Na verdade, o dióxido de carbono tem um efeito oposto! Em vez de estabilizar a temperatura, ele age como um cobertor, aprisionando o calor na atmosfera e contribuindo para o aquecimento global." },
                                     ]}
                                     correctAnswerId={null}
                                     nextStage={6}
@@ -419,17 +416,17 @@ const getMissionsByDifficulty = (difficulty) => {
                             ),
                         },
                         {
-                            displayMap: true,
+                            displayMap: false,
                             next: 7,
                             component: (
                                 <MapFocusStage nextStage={7}
                                     images={[
                                         {
-                                            lat: 43.648052,
-                                            lng: -83.850347,
+                                            lat: 40.35052,
+                                            lng: -73.37517,
                                             image: saginaw_pace,
-                                            title: "The Saginaw Bay is a beautiful area but it may need a little help!",
-                                            text: "We humans impact the world around us, look around your own environment, how do you think you change it? How do you think you can help the world around you, humans, land and oceans alike?",
+                                            title: "A Long Beach é linda, mas pode precisar de uma ajudinha!",
+                                            text: "Nós, humanos, impactamos o mundo ao nosso redor, olhe ao redor do nosso próprio ambiente, como você acha que pode mudá-lo? Como você acha que pode ajudar o mundo ao seu redor, os humanos, a terra e os oceanos?",
                                             zoom: 10,
                                         },
                                     ]}
@@ -442,14 +439,14 @@ const getMissionsByDifficulty = (difficulty) => {
                                 <FinalStage
                                     onArrival={() => console.log('Final stage reached!')}
                                     briefing={{
-                                        title: "Stuck in a Mudstery",
-                                        location: "Saginaw Bay, Michigan, US",
+                                        title: "Acidificação dos oceanos",
+                                        location: "Long Beach, Nova Iorque, EUA",
                                         image: saginaw_bay,
                                         report: "Yay! Thanks to your help, we figured out what’s going on in Saginaw Bay with all this mud and started thinking up clever ways to fix it!",
                                         reportAll: "We’ve seen how it’s way smarter to act before a problem pops up, but when things do go wrong, we can’t just sit back. In today’s example, we talked about mud, but oil spills are a whole other story. They can be even nastier, sticking around much longer and causing bigger damage to marine life. Oil doesn’t just muddy the water, it coats everything, from fish to birds, making it hard for ecosystems to bounce back. The cool thing about using images is that they don’t just show us what’s happening, they give us clues about what might happen next! They help us track where the mud, oil, or any other mess is headed. With that info, we can figure out which areas might be in trouble and jump in with protective measures. Whether it’s blocking the spill, setting up barriers, or getting cleanup crews to the right spot, these images are like treasure maps showing us the best path to take. And even after the initial cleanup, we can keep an eye on things. Satellite images and other tools let us monitor how nature is recovering and make sure it gets back to its full strength. By acting early, responding quickly, and using tech to guide us, we can help protect our bays, rivers, and oceans from the messes that threaten the"
                                     }}
                                     badge={{
-                                        name: "Stuck in a Mudstery Mission Emblem ",
+                                        name: "Emblema Acidificação dos Oceanos",
                                         image: badgeFigure
                                     }}
                                 />
