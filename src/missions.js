@@ -42,9 +42,11 @@ import CoraisPesca from './assets/oceandiving/mission1/coraisredefantasma.png';
 import Eutrofizado1 from './assets/oceandiving/mission3/eutrofizado02.jpg';
 import RedeFantasma from './assets/oceandiving/mission1/redefantasma.jpg';
 import FotoCoralBonita from './assets/oceandiving/mission1/marbrasilcosta.jpg';
-import TartarugaNemo from './assets/oceandiving/mission1/tartaruganemo.jpg'
-
-
+import TartarugaNemo from './assets/oceandiving/mission1/tartaruganemo.jpg';
+import MapaEutro1 from './assets/oceandiving/mission3/eurotrificacaomapa1.webp';
+import LagoEutro from './assets/oceandiving/mission3/eutro.webp';
+import golfomexico2 from './assets/oceandiving/mission3/golfomexico2.jpg';
+// src\assets\oceandiving\mission3\eurotrificacaomapa1.webp
 
 
 
@@ -469,7 +471,7 @@ const getMissionsByDifficulty = (difficulty) => {
                     location: "Golfo do México",
                     image: GolfeDoMexico,
                     text: "O Golfo do México é uma vasta bacia oceânica localizada entre a América do Norte e a América Central, sendo considerado o maior golfo do mundo. Ele cobre uma área de aproximadamente 1,5 milhões de km² e possui um volume de cerca de 2.400 mil km³. Suas águas banham os Estados Unidos, incluindo estados como Flórida, Alabama, Mississippi, Louisiana e Texas; o México, com estados como Tamaulipas e Veracruz; e, a ilha de Cuba. ",
-                    displayMap: true,
+                    displayMap: false,
                     fallbackImage: oman_pace,
                     csvPath: omanData,
                     initialViewState: {
@@ -534,7 +536,7 @@ const getMissionsByDifficulty = (difficulty) => {
                         },
                         {
                             displayMap: false,
-                            fallbackImage: null,
+                            fallbackImage: LagoEutro,
                             next: 2,
                             component: (
                                 <OnlyOneQuestion
@@ -561,30 +563,10 @@ const getMissionsByDifficulty = (difficulty) => {
                                 />
                             ),
                         },
+                       
                         {
-                            displayMap: true,
-                            fallbackImage: null,
-                            next: 3,
-                            component: (
-                                <InformativeSectionStage nextStage={3}>
-                                    <div className="mission-card-header">
-                                        <h2>Phytoplankton</h2>
-                                        <h4>Here's some quick facts about it!</h4>
-                                    </div>
-                                    <div className="image-container">
-                                        <img src={phytoplankton}></img>
-                                    </div>
-                                    <div className="text">
-                                        <p>The food chain is kind of like nature’s dinner party! It’s all about who’s eating and who’s being eaten, with energy passing along the line. It starts with the chefs—plants and tiny phytoplankton—that whip up energy from sunlight. Then, little critters like zooplankton come along for a bite. After that, small fish snack on those critters, and bigger fish come in to munch on the smaller ones. It keeps going until we get to the ocean’s top diners, like sharks or whales!
-                                            Phytoplankton are the tiny heroes at the base of this party. Without them, no one else gets to eat, and the whole chain could fall apart. So, they’re super important to keep the food chain running smoothly!
-                                        </p>
-                                    </div>
-                                </InformativeSectionStage>
-                            ),
-                        },
-                        {
-                            displayMap: true,
-                            fallbackImage: null,
+                            displayMap: false,
+                            fallbackImage: golfomexico2,
                             next: 4,
                             component: (
                                 <OnlyOneQuestion
