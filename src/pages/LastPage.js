@@ -14,6 +14,7 @@ import bloom from '../assets/badges/bloom.png';
 import cyano from '../assets/badges/cyano.png';
 import mudMistery from '../assets/badges/mud-mistery.png';
 import springs from '../assets/badges/springs.png';
+import waterNormalsTexture from '../assets/waternormals.jpeg';
 
 
 extend({ Water });
@@ -21,7 +22,7 @@ extend({ Water });
 function Ocean({ speed }) {
   const ref = useRef();
   const gl = useThree((state) => state.gl);
-  const waterNormals = useLoader(THREE.TextureLoader, '/waternormals.jpeg');
+  const waterNormals = useLoader(THREE.TextureLoader, waterNormalsTexture);
   waterNormals.wrapS = waterNormals.wrapT = THREE.RepeatWrapping;
   const geom = useMemo(() => new THREE.PlaneGeometry(10000, 10000), []);
 
