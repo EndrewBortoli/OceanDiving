@@ -42,11 +42,10 @@ import CoraisPesca from './assets/oceandiving/mission1/coraisredefantasma.png';
 import Eutrofizado1 from './assets/oceandiving/mission3/eutrofizado02.jpg';
 import RedeFantasma from './assets/oceandiving/mission1/redefantasma.jpg';
 import FotoCoralBonita from './assets/oceandiving/mission1/marbrasilcosta.jpg';
-
-
-
-
-
+import Corais from './assets/oceandiving/mission2/corais.jpg';
+import StartMission2 from './assets/oceandiving/mission2/acidificação main.jpg';
+import questao2 from './assets/oceandiving/mission2/image560x340cropped.jpg';
+import pescaesportiva from './assets/oceandiving/mission2/pesca esportiva.jpg';
 
 
 
@@ -271,18 +270,18 @@ const getMissionsByDifficulty = (difficulty) => {
                 {
                     index: 1,
                     concluded: false,
-                    title: "Stuck in a Mudstery",
-                    lat: 43.671677,
-                    lng: -83.821499,
-                    location: "Saginaw Bay, Michigan, US",
-                    image: saginaw_bay,
-                    text: "Unusual changes are happening in Saginaw Bay after a big storm. The waters are shifting, and things aren’t quite right. Your mission is to explore the bay, uncover what’s causing the trouble. Can you help us solve the challenge before it’s too late? Saginaw Bay Saginaw Bay is a big, shallow area of water in eastern Michigan, right next to Lake Huron. It’s home to all kinds of amazing animals, like fish, birds, and other wildlife. Many people come here to fish, and birds love to visit the nearby wetlands. But over the years, the bay has faced some problems, like pollution and losing important habitats for animals. Thankfully, people are working hard to protect it and keep it healthy so that the bay can stay beautiful and full of life for years to come!",
+                    title: "Acidificação dos oceanos",
+                    lat: 40.35052,
+                    lng: -73.37517,
+                    location: "Long Beach, Nova Iorque, EUA ",
+                    image: StartMission2,
+                    text: "Prepare-se! Vamos iniciar a segunda missão em nossa jornada para entender o impacto da acidificação dos oceanos,fenômeno que acontece quando os níveis de dióxido de carbono na atmosfera aumentam, tornando as águas mais ácidas. Além disso, o crescimento da pesca esportiva torna os ecossistemas marinhos dos Estados Unidos mais vulneráveis. Sendo o segundo maior emissor de gases poluentes do mundo, o país enfrenta grandes desafios para proteger seus oceanos e diminuir os impactos ambientais.",
                     displayMap: true,
                     fallbackImage: saginaw_bay,
                     csvPath: sagiData,
                     initialViewState: {
-                        latitude: 43.671677,
-                        longitude: -83.821499,
+                        latitude: 40.35052,
+                        longitude: -73.37517,
                         zoom: 7,
                     },
                     heatmapConfig: {
@@ -313,16 +312,15 @@ const getMissionsByDifficulty = (difficulty) => {
                     stages: [
                         {
                             displayMap: false,
-                            fallbackImage: saginaw_pace,
+                            fallbackImage: questao2,
                             next: 1,
                             component: (
                                 <OnlyOneQuestion
-                                    questionText={"What catches your eye in this image?"}
+                                    questionText={"O que percebemos nos corais quando o oceano se torna mais ácido? "}
                                     options={[
-                                        { id: 'a', text: 'The lack of vibrant green in the water', explanation: 'Hmm, it looks like this area is missing that bright, lush green we would hope for.' },
-                                        { id: 'b', text: 'The blue is not very bright', explanation: 'Looks like that brown stain is messing up the water’s sparkle! Time to put on our detective hats and see what’s behind it.' },
-                                        { id: 'c', text: 'The squares around the water', explanation: 'Look at all those little squares around the bay—they\'re homes, just like yours and mine! But what really catches our eye is that big brown stain in the water. Let’s dig in and see what’s going on!' },
-                                        { id: 'c', text: 'The stain', explanation: 'That brown stain is definitely standing out—it’s affecting the area for sure. Let’s get to the bottom of it and find out what’s happening!' },
+                                        { id: 'a', text: 'Eles perdem sua cor e ficam fragilizados.', explanation: 'Muito bem! A acidificação do oceano faz com que os corais percam sua cor, o que é um sinal de que estão fragilizados e mais vulneráveis.' },
+                                        { id: 'b', text: 'Os corais crescem mais rapidamente e ficam mais coloridos.', explanation: 'Na verdade, o oposto acontece. A acidificação prejudica o crescimento dos corais, fazendo com que eles percam a cor e se tornem mais frágeis.' },
+                                        { id: 'c', text: 'Se tornam resistentes aos impactos da acidificação.', explanation: 'Infelizmente, os corais não são resistentes à acidificação. Ela enfraquece os corais, afetando sua cor e saúde.' },
                                     ]}
                                     correctAnswerId={null}
                                     nextStage={1}
@@ -331,14 +329,15 @@ const getMissionsByDifficulty = (difficulty) => {
                         },
                         {
                             displayMap: false,
-                            fallbackImage: saginaw_pace_stain,
+                            fallbackImage: Corais,
                             next: 2,
                             component: (
                                 <OnlyOneQuestion
-                                    questionText={"Could it be nature doing its thing, or do you think something’s up with the environment? What’s your guess?"}
+                                    questionText={"Qual é uma das causas da acidificação dos oceanos?"}
                                     options={[
-                                        { id: 'a', text: 'It\'s natural! Mother Nature’s just changing the scenery.', explanation: 'Good thinking! It could just be how this region looks without all the phytoplankton. But hey, that big brown splotch in the water is hard to miss! Let’s dive deeper and figure out what it is and what kind of splash it’s making!' },
-                                        { id: 'b', text: 'It’s an environmental impact! Something’s affecting this spot.', explanation: 'You’ve got a sharp eye! That brown stain is definitely up to no good here. Time to roll up our sleeves and investigate what\'s really going on!' },
+                                        { id: 'a', text: 'A redução da pesca nos oceanos.', explanation: 'Não é isso... A redução da pesca pode ajudar os oceanos, mas o que realmente causa a acidificação é o excesso de dióxido de carbono (Co2) no ar.' },
+                                        { id: 'b', text: 'O aumento de dióxido de carbono (Co2) na atmosfera.', explanation: 'Correto! O excesso de dióxido de carbono no ar é uma das principais causas da acidificação dos oceanos.' },
+                                        { id: 'c', text: 'A limpeza frequente das praias.', explanation: 'Na verdade, limpar as praias ajuda o oceano! O que causa a acidificação é o aumento do dióxido de carbono na atmosfera.'}
                                     ]}
                                     correctAnswerId={null}
                                     nextStage={2}
@@ -347,16 +346,15 @@ const getMissionsByDifficulty = (difficulty) => {
                         },
                         {
                             displayMap: false,
-                            fallbackImage: saginaw_pace,
+                            fallbackImage: pescaesportiva,
                             next: 3,
                             component: (
                                 <OnlyOneQuestion
-                                    questionText={"Where did this brown stain come from?"}
+                                    questionText={"O que é a pesca?"}
                                     options={[
-                                        { id: 'a', text: 'It looks like it came from a river', explanation: 'Zooming in, we can spot a river hiding in plain sight! Its waters are the same shade of brown as the land around it. It seems like that’s the source, but the mystery continues—something outside the image might have started it all.' },
-                                        { id: 'b', text: 'It came from somewhere outside the image', explanation: 'Zooming in, we can spot a river hiding in plain sight! Its waters are the same shade of brown as the land around it. It seems like that’s the source, but the mystery continues—something outside the image might have started it all.' },
-                                        { id: 'c', text: 'It appeared spontaneously', explanation: 'Hmm, the storm might have stirred up more than just a breeze! After taking a closer peek, we can spot a river sneaking through. Its waters are so brown, they blend right into the land, looks like that’s where the brown stain is coming from!' },
-                                        { id: 'd', text: 'Many people swimming stirred up sediment from the bottom of the water', explanation: 'Hmm, the storm might have stirred up more than just a breeze! After taking a closer peek, we can spot a river sneaking through. Its waters are so brown, they blend right into the land, looks like that’s where the brown stain is coming from!' },
+                                        { id: 'a', text: 'A pesca é a limpeza do lixo no mar, que ajuda a proteger os oceanos.', explanation: 'Não... A pesca é a captura de peixes, não a limpeza dos oceanos.' },
+                                        { id: 'b', text: 'A pesca é a captura de peixes e outros animais do mar, e pode afetar o equilíbrio dos ecossistemas marinhos.', explanation: 'Correto! A pesca envolve a captura de peixes e, se não for bem controlada, pode prejudicar o equilíbrio natural dos oceanos.' },
+                                        { id: 'c', text: 'A pesca é a criação de peixes em tanques, que não tem impacto nos oceanos.', explanation: 'Não é isso! A pesca é a captura de peixes do mar e pode afetar os ecossistemas marinhos.' },
                                     ]}
                                     correctAnswerId={null}
                                     nextStage={3}
@@ -365,14 +363,15 @@ const getMissionsByDifficulty = (difficulty) => {
                         },
                         {
                             displayMap: false,
-                            fallbackImage: mud_spill,
+                            fallbackImage: pescaesportiva,
                             next: 4,
                             component: (
                                 <OnlyOneQuestion
-                                    questionText={"It seems that those heavy rains brought more than just a downpour. Some water reservoirs couldn’t handle it, and now a whole lot of mud has found its way into the river and out into the bay. What do you think this could mean for the creatures living here?"}
+                                    questionText={"Como a pesca esportiva pode afetar os ecossistemas marinhos?"}
                                     options={[
-                                        { id: 'a', text: "There was no impact, it's just mud!", explanation: "A little mud is no big deal, but we’re talking about a lot of mud here! Imagine the biggest swimming pool you’ve ever seen filled to the brim with mud, and now imagine that times 100. That’s a whole lot of mud, and it can really shake things up." },
-                                        { id: 'b', text: 'Many fish and algae may have died', explanation: "You're right, that amount of mud is terrible!" },
+                                        { id: 'a', text: 'Aumenta a quantidade de peixes nos oceanos.', explanation: 'Não, a pesca esportiva não ajuda a aumentar a quantidade de peixes. Se pegarmos muitos, podemos deixar os peixes em perigo e até fazer algumas espécies sumirem!' },
+                                        { id: 'b', text: 'Melhora a saúde dos recifes de corais.', explanation: 'Pescar em recifes pode machucar os corais! Se tirarmos muitos peixes importantes, os recifes podem ficar doentes e perder sua beleza e vida.' },
+                                        { id: 'c', text: 'Pode causar vulnerabilidade nos ecossistemas marinhos.', explanation: 'Isso mesmo! A Pesca esportiva pode deixar os ecossistemas marinhos mais fracos... Se não cuidarmos bem, algumas espécies podem desaparecer, e isso afeta toda a vida no mar, tornando tudo mais frágil.' },
                                     ]}
                                     correctAnswerId={'b'}
                                     nextStage={4}
