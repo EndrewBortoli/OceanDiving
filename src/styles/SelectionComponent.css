@@ -68,7 +68,7 @@ h1 {
 }
 
 .selected img {
-  border-color: #ECAA01; /* Highlight border for selected option */
+  border-color: #011cec; /* Highlight border for selected option */
   transform: scale(1.1); /* Keep the selected item slightly zoomed */
 }
 
