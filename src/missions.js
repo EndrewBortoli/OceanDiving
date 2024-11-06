@@ -669,7 +669,7 @@ const getMissionsByDifficulty = (difficulty) => {
                     location: "Antártica",
                     image: Geleira,
                     text: "Da primeira revolução mundial até hoje, as emissões de gases estufa foram apenas aumentado, assim como as temperaturas do oceanos. Isso é extremamente preocupante pois temperaturas desreguladas impactam negativamente em ecossistemas marinhos, qualidade de vida dos animais e podem também causar o aumento do nível do mar, outro problema grave que possui consequências catastróficas",
-                    displayMap: true,
+                    displayMap: false,
                     fallbackImage: Geleira,
                     csvPath: omanData,
                     initialViewState: {
