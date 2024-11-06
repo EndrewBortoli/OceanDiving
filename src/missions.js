@@ -42,8 +42,8 @@ import CoraisPesca from './assets/oceandiving/mission1/coraisredefantasma.png';
 import Eutrofizado1 from './assets/oceandiving/mission3/eutrofizado02.jpg';
 import RedeFantasma from './assets/oceandiving/mission1/redefantasma.jpg';
 import FotoCoralBonita from './assets/oceandiving/mission1/marbrasilcosta.jpg';
-import TartarugaNemo from './assets/oceandiving/mission1/tartaruganemo.jpg'
-
+import TartarugaNemo from './assets/oceandiving/mission1/tartaruganemo.jpg';
+import EcossistemaMarinho from './assets/oceandiving/mission1/ecossistemamarinho.jpg';
 
 
 
@@ -121,7 +121,7 @@ const getMissionsByDifficulty = (difficulty) => {
                         },
                         {
                             displayMap: false,
-                            fallbackImage: pace_maine,
+                            fallbackImage: CostaBrasileira,
                             next: 2,
                             component: (
                                 <InformativeSectionStage nextStage={2}>
@@ -204,27 +204,26 @@ const getMissionsByDifficulty = (difficulty) => {
                                         { id: 'c', text: ' Recolher materiais de pesca abandonados e incentivar o uso de alternativas 	mais seguras para a vida marinha. ', explanation: 'Certíssimo, explorador! Remover redes abandonadas e buscar alternativas seguras são ações importantes para preservar os ecossistemas. Torne-se um ajudante do mundo e explore os mares!! ' },
                                         
                                     ]}
-                                    correctAnswerId={'a'}
+                                    correctAnswerId={null}
                                     nextStage={5}  // Ensure this links correctly
                                 />
                             ),
                         },
                         {
                             displayMap: false,
-                            fallbackImage: pace_water,
+                            fallbackImage: EcossistemaMarinho,
                             next: 6,
                             component: (
                                 <InformativeSectionStage nextStage={6}> {/* Update nextStage properly */}
                                     <div className="mission-card-header">
                                         <h2>CUIDE DO NOSSO ECOSSISTEMA!</h2>
-                                        
+                                        <h4>Você pode fazer a diferença!</h4>
                                     </div>
                                     <div className="image-container">
                                         <img src={TartarugaNemo}></img>
                                     </div>
                                     <div className="text">
-                                        <p>Phytoplankton are like tiny algae that live in the ocean, lakes, and rivers. Even though they're super small, they’re really important because they make food from sunlight, just like plants in a garden! They also give off oxygen, which helps animals (and us!) breathe. You can think of them as the ocean’s little helpers, keeping everything healthy and full of life!
-                                            Here’s a fun fact! For a long time, people thought the Amazon rainforest was the ‘lungs of the Earth’ because of all the oxygen it produces. But guess what? It’s actually these tiny ocean algae, called phytoplankton, that do most of the work! They make most of the oxygen we breathe, so even though they’re small, they’re true heroes of the planet!
+                                        <p>
                                         </p>
                                     </div>
                                 </InformativeSectionStage>
@@ -240,9 +239,9 @@ const getMissionsByDifficulty = (difficulty) => {
                                         {
                                             lat: 42.81671,
                                             lng: -69.95354,
-                                            image: RedeFantasma,
-                                            title: "PARABÉNS, VOCÊ FOI MUITO BEM!",
-                                            text: "Agora você sabe os riscos da pesca fantasma! ",
+                                            image: FocaPesca,
+                                            title: "Olá, explorador!",
+                                            text: "Agora você sabe os riscos da pesca fantasma! Espero que tenha se divetido! ",
                                             zoom: 7,
                                         }
                                     ]}
@@ -255,14 +254,14 @@ const getMissionsByDifficulty = (difficulty) => {
                             component: <FinalStage
                                 onArrival={() => console.log('Final stage reached!')}
                                 briefing={{
-                                    title: "North America from Above",
-                                    location: "Northeastern US and Canada",
+                                    title: "Pesca Fantasma",
+                                    location: "Costa Brasileira",
                                     image: pace_maine,
                                     report: "Congratulations! You’ve completed your first mission! Your skills are amazing, and we can’t wait to have your help on our next big adventure!",
-                                    reportAll: "We’ve seen how it’s way smarter to act before a problem pops up, but when things do go wrong, we can’t just sit back. In today’s example, we talked about mud, but oil spills are a whole other story. They can be even nastier, sticking around much longer and causing bigger damage to marine life. Oil doesn’t just muddy the water, it coats everything, from fish to birds, making it hard for ecosystems to bounce back. The cool thing about using images is that they don’t just show us what’s happening, they give us clues about what might happen next! They help us track where the mud, oil, or any other mess is headed. With that info, we can figure out which areas might be in trouble and jump in with protective measures. Whether it’s blocking the spill, setting up barriers, or getting cleanup crews to the right spot, these images are like treasure maps showing us the best path to take. And even after the initial cleanup, we can keep an eye on things. Satellite images and other tools let us monitor how nature is recovering and make sure it gets back to its full strength. By acting early, responding quickly, and using tech to guide us, we can help protect our bays, rivers, and oceans from the messes that threaten the"
+                                    reportAll: "Parabéns! 🚀 Você foi incrível nessa missão e aprendeu como é essencial agir antes que o problema da pesca fantasma saia do controle. Quando redes e outros materiais são deixados no mar, eles não só prejudicam o oceano, mas também causam danos profundos em toda a biodiversidade marinha. A gente viu o impacto que isso pode ter nos corais, nas tartarugas e em tantos outros seres marinhos.A boa notícia? Você agora sabe o quanto é importante cuidar e agir! Com a ajuda de tecnologias e ferramentas como imagens e monitoramento, é possível identificar áreas de risco e entrar em ação. Assim, podemos proteger nossos mares e garantir que esses ecossistemas fiquem fortes e cheios de vida. Que essa missão inspire você a explorar mais e cuidar cada vez melhor dos nossos oceanos! 🌊🐢"
                                 }}
                                 badge={{
-                                    name: "North America from Above Mission Emblem",
+                                    name: "Emblema da Missão de Pesca Fantasma",
                                     image: badgeFigure
                                 }}
                             />
