@@ -59,6 +59,9 @@ import carrinhofumaça from './assets/oceandiving/mission2/carro-soltando-fumaç
 import industria from './assets/oceandiving/mission2/efeito-estufa.jpg';
 import longbeach from './assets/oceandiving/mission2/long-beach.jpg';
 
+import EmblemaCongrats from './assets/emblematartarugacongrats.jpg';
+import EmblemaInicio from './assets/emblemainicio.jpg';
+
 //pulei linhas pra não arriscar de dar erro depois. depois pode apagar
 import MapaAntartica from './assets/oceandiving/mission4/antartica_mapa.png';
 import GeloDerretendo from './assets/oceandiving/mission4/gelo_derretendo.jpg';
@@ -236,25 +239,7 @@ const getMissionsByDifficulty = (difficulty) => {
                                 </InformativeSectionStage>
                             ),
                         },
-                        {
-                            displayMap: true,
-                            next: 7,
-                            component: (
-                                <MapFocusStage nextStage={7} // Make sure the progression continues logically
-                                    images={[
-                                        {
-                                            lat: 42.81671,
-                                            lng: -69.95354,
-                                            image: FocaPesca,
-                                            title: "Olá, explorador!",
-                                            text: "Agora você sabe os riscos da pesca fantasma! Espero que tenha se divetido! ",
-                                            zoom: 7,
-                                        }
-                                    ]}
-                                />
-                            ),
-                        },
-
+                       
                         {
                             displayMap: true,
                             component: <FinalStage
