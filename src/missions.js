@@ -46,9 +46,12 @@ import TartarugaNemo from './assets/oceandiving/mission1/tartaruganemo.jpg';
 import MapaEutro1 from './assets/oceandiving/mission3/eurotrificacaomapa1.webp';
 import LagoEutro from './assets/oceandiving/mission3/eutro.webp';
 import golfomexico2 from './assets/oceandiving/mission3/golfomexico2.jpg';
-// src\assets\oceandiving\mission3\eurotrificacaomapa1.webp
 
 
+import Corais from './assets/oceandiving/mission2/corais.jpg';
+import StartMission2 from './assets/oceandiving/mission2/acidificação main.jpg';
+import questao2 from './assets/oceandiving/mission2/image560x340cropped.jpg';
+import pescaesportiva from './assets/oceandiving/mission2/pesca esportiva.jpg';
 
 
 
@@ -57,7 +60,7 @@ import golfomexico2 from './assets/oceandiving/mission3/golfomexico2.jpg';
 //pulei linhas pra não arriscar de dar erro depois. depois pode apagar
 import MapaAntartica from './assets/oceandiving/mission4/antartica_mapa.png';
 import GeloDerretendo from './assets/oceandiving/mission4/gelo_derretendo.jpg';
-import Geleira from './assets/oceandiving/mission4/img_introducao.jpg'
+import Geleira from './assets/oceandiving/mission4/img_introducao.jpg';
 
 // Função que retorna as missões com base no nível de dificuldade
 const getMissionsByDifficulty = (difficulty) => {
@@ -218,11 +221,11 @@ const getMissionsByDifficulty = (difficulty) => {
                             component: (
                                 <InformativeSectionStage nextStage={6}> {/* Update nextStage properly */}
                                     <div className="mission-card-header">
-                                        <h2>CUIDE DO NOSSO ECOSSISTEMA!</h2>
-                                        
+                                        <h2>The answer is: Algae</h2>
+                                        <h4>Here's some quick facts about it!</h4>
                                     </div>
                                     <div className="image-container">
-                                        <img src={TartarugaNemo}></img>
+                                        <img src={phytoplankton}></img>
                                     </div>
                                     <div className="text">
                                         <p>Phytoplankton are like tiny algae that live in the ocean, lakes, and rivers. Even though they're super small, they’re really important because they make food from sunlight, just like plants in a garden! They also give off oxygen, which helps animals (and us!) breathe. You can think of them as the ocean’s little helpers, keeping everything healthy and full of life!
@@ -233,8 +236,7 @@ const getMissionsByDifficulty = (difficulty) => {
                             ),
                         },
                         {
-                            displayMap: false,
-                            fallbackImage: CostaBrasileira,
+                            displayMap: true,
                             next: 7,
                             component: (
                                 <MapFocusStage nextStage={7} // Make sure the progression continues logically
@@ -242,9 +244,9 @@ const getMissionsByDifficulty = (difficulty) => {
                                         {
                                             lat: 42.81671,
                                             lng: -69.95354,
-                                            image: RedeFantasma,
-                                            title: "PARABÉNS, VOCÊ FOI MUITO BEM!",
-                                            text: "Agora você sabe os riscos da pesca fantasma! ",
+                                            image: maine_to_george,
+                                            title: "This is the coast we were looking at!",
+                                            text: "With the satellite image we could see all its beauty!",
                                             zoom: 7,
                                         }
                                     ]}
@@ -274,18 +276,18 @@ const getMissionsByDifficulty = (difficulty) => {
                 {
                     index: 1,
                     concluded: false,
-                    title: "Stuck in a Mudstery",
-                    lat: 43.671677,
-                    lng: -83.821499,
-                    location: "Saginaw Bay, Michigan, US",
-                    image: saginaw_bay,
-                    text: "Unusual changes are happening in Saginaw Bay after a big storm. The waters are shifting, and things aren’t quite right. Your mission is to explore the bay, uncover what’s causing the trouble. Can you help us solve the challenge before it’s too late? Saginaw Bay Saginaw Bay is a big, shallow area of water in eastern Michigan, right next to Lake Huron. It’s home to all kinds of amazing animals, like fish, birds, and other wildlife. Many people come here to fish, and birds love to visit the nearby wetlands. But over the years, the bay has faced some problems, like pollution and losing important habitats for animals. Thankfully, people are working hard to protect it and keep it healthy so that the bay can stay beautiful and full of life for years to come!",
+                    title: "Acidificação dos oceanos",
+                    lat: 40.35052,
+                    lng: -73.37517,
+                    location: "Long Beach, Nova Iorque, EUA ",
+                    image: StartMission2,
+                    text: "Prepare-se! Vamos iniciar a segunda missão em nossa jornada para entender o impacto da acidificação dos oceanos,fenômeno que acontece quando os níveis de dióxido de carbono na atmosfera aumentam, tornando as águas mais ácidas. Além disso, o crescimento da pesca esportiva torna os ecossistemas marinhos dos Estados Unidos mais vulneráveis. Sendo o segundo maior emissor de gases poluentes do mundo, o país enfrenta grandes desafios para proteger seus oceanos e diminuir os impactos ambientais.",
                     displayMap: true,
                     fallbackImage: saginaw_bay,
                     csvPath: sagiData,
                     initialViewState: {
-                        latitude: 43.671677,
-                        longitude: -83.821499,
+                        latitude: 40.35052,
+                        longitude: -73.37517,
                         zoom: 7,
                     },
                     heatmapConfig: {
@@ -316,16 +318,15 @@ const getMissionsByDifficulty = (difficulty) => {
                     stages: [
                         {
                             displayMap: false,
-                            fallbackImage: saginaw_pace,
+                            fallbackImage: questao2,
                             next: 1,
                             component: (
                                 <OnlyOneQuestion
-                                    questionText={"What catches your eye in this image?"}
+                                    questionText={"O que percebemos nos corais quando o oceano se torna mais ácido? "}
                                     options={[
-                                        { id: 'a', text: 'The lack of vibrant green in the water', explanation: 'Hmm, it looks like this area is missing that bright, lush green we would hope for.' },
-                                        { id: 'b', text: 'The blue is not very bright', explanation: 'Looks like that brown stain is messing up the water’s sparkle! Time to put on our detective hats and see what’s behind it.' },
-                                        { id: 'c', text: 'The squares around the water', explanation: 'Look at all those little squares around the bay—they\'re homes, just like yours and mine! But what really catches our eye is that big brown stain in the water. Let’s dig in and see what’s going on!' },
-                                        { id: 'c', text: 'The stain', explanation: 'That brown stain is definitely standing out—it’s affecting the area for sure. Let’s get to the bottom of it and find out what’s happening!' },
+                                        { id: 'a', text: 'Eles perdem sua cor e ficam fragilizados.', explanation: 'Muito bem! A acidificação do oceano faz com que os corais percam sua cor, o que é um sinal de que estão fragilizados e mais vulneráveis.' },
+                                        { id: 'b', text: 'Os corais crescem mais rapidamente e ficam mais coloridos.', explanation: 'Na verdade, o oposto acontece. A acidificação prejudica o crescimento dos corais, fazendo com que eles percam a cor e se tornem mais frágeis.' },
+                                        { id: 'c', text: 'Se tornam resistentes aos impactos da acidificação.', explanation: 'Infelizmente, os corais não são resistentes à acidificação. Ela enfraquece os corais, afetando sua cor e saúde.' },
                                     ]}
                                     correctAnswerId={null}
                                     nextStage={1}
@@ -334,14 +335,15 @@ const getMissionsByDifficulty = (difficulty) => {
                         },
                         {
                             displayMap: false,
-                            fallbackImage: saginaw_pace_stain,
+                            fallbackImage: Corais,
                             next: 2,
                             component: (
                                 <OnlyOneQuestion
-                                    questionText={"Could it be nature doing its thing, or do you think something’s up with the environment? What’s your guess?"}
+                                    questionText={"Qual é uma das causas da acidificação dos oceanos?"}
                                     options={[
-                                        { id: 'a', text: 'It\'s natural! Mother Nature’s just changing the scenery.', explanation: 'Good thinking! It could just be how this region looks without all the phytoplankton. But hey, that big brown splotch in the water is hard to miss! Let’s dive deeper and figure out what it is and what kind of splash it’s making!' },
-                                        { id: 'b', text: 'It’s an environmental impact! Something’s affecting this spot.', explanation: 'You’ve got a sharp eye! That brown stain is definitely up to no good here. Time to roll up our sleeves and investigate what\'s really going on!' },
+                                        { id: 'a', text: 'A redução da pesca nos oceanos.', explanation: 'Não é isso... A redução da pesca pode ajudar os oceanos, mas o que realmente causa a acidificação é o excesso de dióxido de carbono (Co2) no ar.' },
+                                        { id: 'b', text: 'O aumento de dióxido de carbono (Co2) na atmosfera.', explanation: 'Correto! O excesso de dióxido de carbono no ar é uma das principais causas da acidificação dos oceanos.' },
+                                        { id: 'c', text: 'A limpeza frequente das praias.', explanation: 'Na verdade, limpar as praias ajuda o oceano! O que causa a acidificação é o aumento do dióxido de carbono na atmosfera.'}
                                     ]}
                                     correctAnswerId={null}
                                     nextStage={2}
@@ -350,16 +352,15 @@ const getMissionsByDifficulty = (difficulty) => {
                         },
                         {
                             displayMap: false,
-                            fallbackImage: saginaw_pace,
+                            fallbackImage: pescaesportiva,
                             next: 3,
                             component: (
                                 <OnlyOneQuestion
-                                    questionText={"Where did this brown stain come from?"}
+                                    questionText={"O que é a pesca?"}
                                     options={[
-                                        { id: 'a', text: 'It looks like it came from a river', explanation: 'Zooming in, we can spot a river hiding in plain sight! Its waters are the same shade of brown as the land around it. It seems like that’s the source, but the mystery continues—something outside the image might have started it all.' },
-                                        { id: 'b', text: 'It came from somewhere outside the image', explanation: 'Zooming in, we can spot a river hiding in plain sight! Its waters are the same shade of brown as the land around it. It seems like that’s the source, but the mystery continues—something outside the image might have started it all.' },
-                                        { id: 'c', text: 'It appeared spontaneously', explanation: 'Hmm, the storm might have stirred up more than just a breeze! After taking a closer peek, we can spot a river sneaking through. Its waters are so brown, they blend right into the land, looks like that’s where the brown stain is coming from!' },
-                                        { id: 'd', text: 'Many people swimming stirred up sediment from the bottom of the water', explanation: 'Hmm, the storm might have stirred up more than just a breeze! After taking a closer peek, we can spot a river sneaking through. Its waters are so brown, they blend right into the land, looks like that’s where the brown stain is coming from!' },
+                                        { id: 'a', text: 'A pesca é a limpeza do lixo no mar, que ajuda a proteger os oceanos.', explanation: 'Não, a pesca esportiva não ajuda a aumentar a quantidade de peixes. Se pegarmos muitos, podemos deixar os peixes em perigo e até fazer algumas espécies sumirem!' },
+                                        { id: 'b', text: 'A pesca é a captura de peixes e outros animais do mar, e pode afetar o equilíbrio dos ecossistemas marinhos.', explanation: 'Pescar em recifes pode machucar os corais! Se tirarmos muitos peixes importantes, os recifes podem ficar doentes e perder sua beleza e vida.' },
+                                        { id: 'c', text: 'A pesca é a criação de peixes em tanques, que não tem impacto nos oceanos.', explanation: 'Isso mesmo! A Pesca esportiva pode deixar os ecossistemas marinhos mais fracos... Se não cuidarmos bem, algumas espécies podem desaparecer, e isso afeta toda a vida no mar, tornando tudo mais frágil.' },
                                     ]}
                                     correctAnswerId={null}
                                     nextStage={3}
@@ -368,14 +369,15 @@ const getMissionsByDifficulty = (difficulty) => {
                         },
                         {
                             displayMap: false,
-                            fallbackImage: mud_spill,
+                            fallbackImage: pescaesportiva,
                             next: 4,
                             component: (
                                 <OnlyOneQuestion
-                                    questionText={"It seems that those heavy rains brought more than just a downpour. Some water reservoirs couldn’t handle it, and now a whole lot of mud has found its way into the river and out into the bay. What do you think this could mean for the creatures living here?"}
+                                    questionText={"Como a pesca esportiva pode afetar os ecossistemas marinhos?"}
                                     options={[
-                                        { id: 'a', text: "There was no impact, it's just mud!", explanation: "A little mud is no big deal, but we’re talking about a lot of mud here! Imagine the biggest swimming pool you’ve ever seen filled to the brim with mud, and now imagine that times 100. That’s a whole lot of mud, and it can really shake things up." },
-                                        { id: 'b', text: 'Many fish and algae may have died', explanation: "You're right, that amount of mud is terrible!" },
+                                        { id: 'a', text: 'Aumenta a quantidade de peixes nos oceanos.', explanation: 'Não, a pesca esportiva não ajuda a aumentar a quantidade de peixes. Se pegarmos muitos, podemos deixar os peixes em perigo e até fazer algumas espécies sumirem!' },
+                                        { id: 'b', text: 'Melhora a saúde dos recifes de corais.', explanation: 'Pescar em recifes pode machucar os corais! Se tirarmos muitos peixes importantes, os recifes podem ficar doentes e perder sua beleza e vida.' },
+                                        { id: 'c', text: 'Pode causar vulnerabilidade nos ecossistemas marinhos', explanation: 'Isso mesmo! A Pesca esportiva pode deixar os ecossistemas marinhos mais fracos... Se não cuidarmos bem, algumas espécies podem desaparecer, e isso afeta toda a vida no mar, tornando tudo mais frágil.' },
                                     ]}
                                     correctAnswerId={'b'}
                                     nextStage={4}
@@ -653,7 +655,7 @@ const getMissionsByDifficulty = (difficulty) => {
                     location: "Antártica",
                     image: Geleira,
                     text: "Da primeira revolução mundial até hoje, as emissões de gases estufa foram apenas aumentado, assim como as temperaturas do oceanos. Isso é extremamente preocupante pois temperaturas desreguladas impactam negativamente em ecossistemas marinhos, qualidade de vida dos animais e podem também causar o aumento do nível do mar, outro problema grave que possui consequências catastróficas",
-                    displayMap: true,
+                    displayMap: false,
                     fallbackImage: Geleira,
                     csvPath: omanData,
                     initialViewState: {
@@ -741,16 +743,99 @@ const getMissionsByDifficulty = (difficulty) => {
                             ),
                         },
                         {
+                            // essa questão aparece se selecionar a "a" da 3
+                            displayMap: false,
+                            fallbackImage: GeloDerretendo,
+                            next: 3,
+                            component: (
+                                <OnlyOneQuestion
+                                    questionText={" Se os animais não sobreviverem, o ecossistema marinho se desordena. Consegue dizer o porquê?"}
+                                    options={[
+                                        {
+                                            id: 'a',
+                                            text: "A cadeia alimentar fica bagunçada, já que não tem animais o suficiente.",
+                                            explanation: "Sim, isso aí! Se um animal desaparecer, outros animais e plantas sofrem com isso. Por exemplo, se os animais que caçam sumirem, os animais caçados podem se multiplicar demais e acabar com as plantas.",
+                                        },
+                                        {
+                                            id: 'b',
+                                            text: "Como há menos peixes na água, o nível do mar diminui e os mares secam",
+                                            explanation: "A resposta está incorreta, já que o nível do mar não depende da quantidade de peixes. Na verdade, o nível do mar está aumentando por causa do derretimento do gelo!",
+
+                                            id: 'c',
+                                            text: " A perda de biodiversidade deixa os ecossistemas mais fracos.",
+                                            explanation: "Correto! Se tem mais variedade de seres em um ecossistema ele consegue se recuperar mais rápido, já que cada ser tem um trabalho específico.",
+                                        },
+                                    ]}
+                                    correctAnswerId={null}   
+                                    nextStage={3}
+                                />
+                            ),
+                        },
+                        {
+                            // essa questão aparece se selecionar a "b" da 3
+                            displayMap: false,
+                            fallbackImage: GeloDerretendo,
+                            next: 3,
+                            component: (
+                                <OnlyOneQuestion
+                                    questionText={"Com as mudanças climáticas, os ecossistemas marinhos se desordenam. Consegue dizer o porquê?"}
+                                    options={[
+                                        {
+                                            id: 'a',
+                                            text: "Os animais suam muito e se desidratam.",
+                                            explanation: "Não é bem isso. Os animais marinhos não suam, então não sofrem com esse problema."
+                                        },
+                                        {
+                                            id: 'b',
+                                            text: "A temperatura do mar aumenta e prejudica os animais.",
+                                            explanation: "A resposta está incorreta, já que o nível do mar não depende da quantidade de peixes. Na verdade, o nível do mar está aumentando por causa do derretimento do gelo!",
+
+                                            id: 'c',
+                                            text: " A perda de biodiversidade deixa os ecossistemas mais fracos.",
+                                            explanation: "Correto! Se tem mais variedade de seres em um ecossistema ele consegue se recuperar mais rápido, já que cada ser tem um trabalho específico."
+                                        },
+                                    ]}
+                                    correctAnswerId={null}   
+                                    nextStage={3}
+                                />
+                            ),
+                        },
+                        {
+                            // essa questão aparece se selecionar a "b" da 3
+                            displayMap: false,
+                            fallbackImage: GeloDerretendo,
+                            next: 4,
+                            component: (
+                                <OnlyOneQuestion
+                                    questionText={" Se os animais não sobreviverem, o ecossistema marinho se desordena. Consegue dizer o porquê?"}
+                                    options={[
+                                        {
+                                            id: 'a',
+                                            text: "A cadeia alimentar fica bagunçada, já que não tem animais o suficiente.",
+                                            explanation: "Sim, isso aí! Se um animal desaparecer, outros animais e plantas sofrem com isso. Por exemplo, se os animais que caçam sumirem, os animais caçados podem se multiplicar demais e acabar com as plantas."
+                                        },
+                                        {
+                                            id: 'b',
+                                            text: "Como há menos peixes na água, o nível do mar diminui e os mares secam",
+                                            explanation: "A resposta está incorreta, já que o nível do mar não depende da quantidade de peixes. Na verdade, o nível do mar está aumentando por causa do derretimento do gelo!"
+                                        },
+                                    ]}
+                                    correctAnswerId={null}   
+                                    nextStage={4}
+                                />
+                            ),
+                        },
+                        {
                             displayMap: true,
                             component: (
                                 <FinalStage
                                     onArrival={() => console.log('Final stage reached!')}
                                     briefing={{
-                                        title: "Tiny Travelers with Big Effects!",
-                                        location: "Mauritania",
+                                        title: "Parabéns, você concluiu a missão!",
+                                        location: "Antártica",
                                         image: mauritania,
                                         report: "",
-                                        reportAll: "Congratulations, fellow scientist! We’ve explored the fascinating world of aerosols and their impact on phytoplankton, uncovering how the wind, desert, and ocean work together in surprising ways. From tiny particles floating in the air to nutrient-packed dust delivered by the wind, we now know that aerosols play a big role in shaping ecosystems like the vibrant marine life along Mauritania’s coast. Mission Complete: The Grand Wrap-Up: Throughout this journey, we’ve learned that nature is a vast, interconnected system where even the smallest things, like aerosols, can have powerful effects—some good, some not so much. By examining satellite images, forming hypotheses, and understanding the role of aerosols, we’ve gained valuable insights into how these microscopic particles help sustain life in our oceans. As we wrap up this mission, remember that the mysteries of nature are always waiting to be explored! With every new piece of information, we unlock more secrets, helping us not only to understand the world around us but also to protect it for the future."
+                                        reportAll: "Agora você sabe muito mais sobre a mudança de temperatura e seus impactos. Sabia que algumas questões têm mais de uma reposta correta? Se quiser, selecione a missão no globo e faça-a novamente para adquirir mais conhecimento sobre o assunto"
                                     }}
                                     badge={{
                                         name: "Tiny Travelers with Big Effects!",
