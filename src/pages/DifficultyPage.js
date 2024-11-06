@@ -116,7 +116,7 @@ export default function App() {
         {isPlaying ? 'Mute' : 'Unmute'}
       </button>
       <button className="start-mission-button" onClick={goToNextPage}>
-        COMEÇAR MISSÃO
+        START MISSION
       </button>
     </>
   );
