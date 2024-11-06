@@ -352,9 +352,9 @@ const getMissionsByDifficulty = (difficulty) => {
                                 <OnlyOneQuestion
                                     questionText={"O que é a pesca?"}
                                     options={[
-                                        { id: 'a', text: 'A pesca é a limpeza do lixo no mar, que ajuda a proteger os oceanos.', explanation: 'Não... A pesca é a captura de peixes, não a limpeza dos oceanos.' },
-                                        { id: 'b', text: 'A pesca é a captura de peixes e outros animais do mar, e pode afetar o equilíbrio dos ecossistemas marinhos.', explanation: 'Correto! A pesca envolve a captura de peixes e, se não for bem controlada, pode prejudicar o equilíbrio natural dos oceanos.' },
-                                        { id: 'c', text: 'A pesca é a criação de peixes em tanques, que não tem impacto nos oceanos.', explanation: 'Não é isso! A pesca é a captura de peixes do mar e pode afetar os ecossistemas marinhos.' },
+                                        { id: 'a', text: 'A pesca é a limpeza do lixo no mar, que ajuda a proteger os oceanos.', explanation: 'Não, a pesca esportiva não ajuda a aumentar a quantidade de peixes. Se pegarmos muitos, podemos deixar os peixes em perigo e até fazer algumas espécies sumirem!' },
+                                        { id: 'b', text: 'A pesca é a captura de peixes e outros animais do mar, e pode afetar o equilíbrio dos ecossistemas marinhos.', explanation: 'Pescar em recifes pode machucar os corais! Se tirarmos muitos peixes importantes, os recifes podem ficar doentes e perder sua beleza e vida.' },
+                                        { id: 'c', text: 'A pesca é a criação de peixes em tanques, que não tem impacto nos oceanos.', explanation: 'Isso mesmo! A Pesca esportiva pode deixar os ecossistemas marinhos mais fracos... Se não cuidarmos bem, algumas espécies podem desaparecer, e isso afeta toda a vida no mar, tornando tudo mais frágil.' },
                                     ]}
                                     correctAnswerId={null}
                                     nextStage={3}
@@ -371,7 +371,7 @@ const getMissionsByDifficulty = (difficulty) => {
                                     options={[
                                         { id: 'a', text: 'Aumenta a quantidade de peixes nos oceanos.', explanation: 'Não, a pesca esportiva não ajuda a aumentar a quantidade de peixes. Se pegarmos muitos, podemos deixar os peixes em perigo e até fazer algumas espécies sumirem!' },
                                         { id: 'b', text: 'Melhora a saúde dos recifes de corais.', explanation: 'Pescar em recifes pode machucar os corais! Se tirarmos muitos peixes importantes, os recifes podem ficar doentes e perder sua beleza e vida.' },
-                                        { id: 'c', text: 'Pode causar vulnerabilidade nos ecossistemas marinhos.', explanation: 'Isso mesmo! A Pesca esportiva pode deixar os ecossistemas marinhos mais fracos... Se não cuidarmos bem, algumas espécies podem desaparecer, e isso afeta toda a vida no mar, tornando tudo mais frágil.' },
+                                        { id: 'c', text: 'Pode causar vulnerabilidade nos ecossistemas marinhos', explanation: 'Isso mesmo! A Pesca esportiva pode deixar os ecossistemas marinhos mais fracos... Se não cuidarmos bem, algumas espécies podem desaparecer, e isso afeta toda a vida no mar, tornando tudo mais frágil.' },
                                     ]}
                                     correctAnswerId={'b'}
                                     nextStage={4}
