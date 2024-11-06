@@ -52,12 +52,15 @@ import StartMission2 from './assets/oceandiving/mission2/acidificação main.jpg
 import questao2 from './assets/oceandiving/mission2/image560x340cropped.jpg';
 import pescaesportiva from './assets/oceandiving/mission2/pesca esportiva.jpg';
 import pescaartesanal from './assets/oceandiving/mission2/pescaartesanal.jpg';
-import maiscorais from './assets/oceandiving/mission2/O-que-e-a-acidificacao-dos-oceanos-e-quais-os-impactos-que-isso-causa_capa.jpg'
+import carrinhofumaça from './assets/oceandiving/mission2/carro-soltando-fumaça-preta.png';
+import industria from './assets/oceandiving/mission2/efeito-estufa.jpg';
 import longbeach from './assets/oceandiving/mission2/long-beach.jpg';
 import agua from './assets/oceandiving/mission2/iStock-822555200.webp';
 import pexe from './assets/oceandiving/mission2/pexe.jpg';
 import TemperaturaAumentando from './assets/oceandiving/mission4/temperaturas_aumentando.webp';
 import EmblemaSubmerged from './assets/emblemasubmerged.jpg';
+import TemperaturaAumentando from './assets/oceandiving/mission4/temperaturas_aumentando.webp'
+
 
 
 import EmblemaCongrats from './assets/emblematartarugacongrats.jpg';
@@ -373,19 +376,19 @@ const getMissionsByDifficulty = (difficulty) => {
                         },
                         {
                             displayMap: false,
-                            fallbackImage: agua,
+                            fallbackImage: industria,
                             next: 5,
                             component: (
                                 <InformativeSectionStage nextStage={5}>
                                     <div className="mission-card-header">
-                                        <h2>A acidificação</h2>
-                                        <p>A acidificação dos oceanos é um problema enorme! Quando o dióxido de carbono (CO₂) na atmosfera aumenta, ele é absorvido pelo oceano, deixando a água mais ácida. Isso faz mal para muitos seres marinhos, especialmente os que têm conchas, como ostras e corais. </p>
+                                        <h2>O efeito estufa</h2>
+                                        <p>Com todo esse estudo, concluímos que a acidificação dos oceanos é um perigo! E como uma de suas causas, temos o efeito estufa que é um problemão também! Ele acontece quando alguns gases, como o dióxido de carbono (CO₂), ficam presos na atmosfera e deixam a Terra mais quente. Só que quando tem CO₂ demais, não é só o ar que sofre — os oceanos também!</p>
                                     </div>
                                     <div className="image-container">
-                                        <img src={pexe}></img>
+                                        <img src={carrinhofumaça}></img>
                                     </div>
                                     <div className="text">
-                                        <p> E os corais, por exemplo, são o lar de várias espécies no fundo do mar! Com a água mais ácida, eles ficam mais frágeis e podem até morrer, o que ameaça a biodiversidade marinha. Se nada mudar, espécies importantes podem desaparecer, desequilibrando o oceano e afetando todos nós!
+                                        <p>Esse gás, podendo ser emitido com a queima de combustíveis fósseis, desmatamento e até mesmo processos industriais acaba sendo absorvido pela água do mar e deixa ela mais ácida. Isso pode machucar os animais e plantas que vivem no oceano, prejudicando a biodiversidade marinha. Com o tempo, esse processo pode até fazer com que algumas espécies desapareçam, mudando o equilíbrio dos oceanos e impactando todo o planeta! E aí, prontos para a última pergunta?
                                         </p>
                                     </div>
                                 </InformativeSectionStage>
@@ -393,15 +396,15 @@ const getMissionsByDifficulty = (difficulty) => {
                         },
                         {
                             displayMap: false,
-                            fallbackImage: maiscorais,
+                            fallbackImage: industria,
                             next: 6,
                             component: (
                                 <OnlyOneQuestion
-                                    questionText={"O que acontece com a água do mar quando mais dióxido de carbono é absorvido pelos oceanos?"}
+                                    questionText={"Como o aumento do dióxido de carbono (CO2) na atmosfera afeta o clima?"}
                                     options={[
-                                        { id: 'a', text: "A água do mar fica mais doce e ajuda os peixes a crescerem.", explanation: "Na verdade, a água do mar fica mais ácida, e isso pode ser ruim para muitos animais marinhos." },
-                                        { id: 'b', text: 'A água do mar fica mais ácida, o que pode prejudicar os animais marinhos.', explanation: "Sim! Quando mais dióxido de carbono é absorvido, a água fica mais ácida, e isso pode fazer mal aos animais do oceano." },
-                                        { id: 'c', text: 'A água do mar fica mais quente, mas nada muda para os peixes.', explanation: "Isso não é verdade! A água do mar fica mais ácida, e isso pode prejudicar os peixes e outras espécies." },
+                                        { id: 'a', text: "Diminui a quantidade de chuva.", explanation: "Não é bem isso... O aumento do dióxido de carbono não diminui a quantidade de chuva diretamente. Então, pode causar sim mudanças nos padrões de precipitação levando a mais chuvas em algumas regiões e secas em outras. Assim, o impacto no clima é complexo!" },
+                                        { id: 'b', text: 'Contribui para o aquecimento global.', explanation: "Boa! O aumento do dióxido de carbono faz com que mais calor fique preso na atmosfera, resultando em temperaturas mais altas e mudanças climáticas. Isso pode causar eventos climáticos extremos, como secas e tempestades fortes!" },
+                                        { id: 'c', text: 'Ajuda a manter a temperatura da Terra estável.', explanation: "Na verdade, o dióxido de carbono tem um efeito oposto! Em vez de estabilizar a temperatura, ele age como um cobertor, aprisionando o calor na atmosfera e contribuindo para o aquecimento global." },
                                     ]}
                                     correctAnswerId={null}
                                     nextStage={6}
@@ -802,31 +805,6 @@ const getMissionsByDifficulty = (difficulty) => {
                                     ]}
                                     correctAnswerId={null}   
                                     nextStage={4}
-                                />
-                            ),
-                        },
-                        {
-                            // essa questão aparece se selecionar a "b" da 3
-                            displayMap: false,
-                            fallbackImage: GeloDerretendo,
-                            next: 5,
-                            component: (
-                                <OnlyOneQuestion
-                                    questionText={" Se os animais não sobreviverem, o ecossistema marinho se desordena. Consegue dizer o porquê?"}
-                                    options={[
-                                        {
-                                            id: 'a',
-                                            text: "A cadeia alimentar fica bagunçada, já que não tem animais o suficiente.",
-                                            explanation: "Sim, isso aí! Se um animal desaparecer, outros animais e plantas sofrem com isso. Por exemplo, se os animais que caçam sumirem, os animais caçados podem se multiplicar demais e acabar com as plantas."
-                                        },
-                                        {
-                                            id: 'b',
-                                            text: "Como há menos peixes na água, o nível do mar diminui e os mares secam",
-                                            explanation: "A resposta está incorreta, já que o nível do mar não depende da quantidade de peixes. Na verdade, o nível do mar está aumentando por causa do derretimento do gelo!"
-                                        },
-                                    ]}
-                                    correctAnswerId={null}   
-                                    nextStage={5}
                                 />
                             ),
                         },
