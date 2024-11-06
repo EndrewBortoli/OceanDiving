@@ -408,7 +408,7 @@ const getMissionsByDifficulty = (difficulty) => {
                             ),
                         },
                         {
-                            displayMap: false,
+                            displayMap: true,
                             next: 7,
                             component: (
                                 <MapFocusStage nextStage={7}
@@ -435,7 +435,7 @@ const getMissionsByDifficulty = (difficulty) => {
                                         location: "Long Beach, Nova Iorque, EUA",
                                         image: saginaw_bay,
                                         report: "Muito bem! Graças à sua ajuda, descobrimos o que está acontecendo em Long Beach com todos esses problemas resultando na acidificação dos oceanos e começamos a pensar em maneiras inteligentes de consertar isso!",
-                                        reportAll: "Com todas essas perguntas e explicações, você aprendeu como o dióxido de carbono afeta os oceanos, como a pesca esportiva e a pesca fantasma impactam a vida marinha, e por que é tão importante cuidar do nosso planeta. Entender esses temas ajuda a proteger os ecossistemas e a biodiversidade marinha. Cada ação conta, e agora você sabe mais sobre como proteger os oceanos. Continue assim!"
+                                        reportAll: "Com todas essas perguntas e explicações, você aprendeu como o dióxido de carbono afeta os oceanos, como a pesca esportiva e a pesca fantasma impactam a vida marinha, e por que é tão importante cuidar do nosso planeta. Além disso, aprendeu sobre o impacto da pesca esportiva e da pesca fantasma, que causam grandes danos à biodiversidade, ameaçando várias espécies e comprometendo o equilíbrio dos ecossistemas. Esses temas mostram a importância de cuidarmos do nosso planeta, já que o oceano é essencial para a saúde do planeta e de todos nós. Entender essas questões e conscientizar outras pessoas são passos fundamentais para preservar nossos mares e suas riquezas naturais. Cada ação, por menor que pareça, contribui para a proteção dos ecossistemas e para o bem-estar de toda a biodiversidade marinha, e agora, você sabe mais sobre como proteger os oceanos. Continue assim!"
                                     }}
                                     badge={{
                                         name: "Emblema Acidificação dos Oceanos",
