@@ -522,8 +522,29 @@ const getMissionsByDifficulty = (difficulty) => {
                         },
                         {
                             displayMap: false,
-                            fallbackImage: LagoEutro,
+                            fallbackImage: null,
                             next: 2,
+                            component: (
+                                <InformativeSectionStage nextStage={5}>
+                                    <div className="mission-card-header">
+                                        <h2>Analise e entenda a imagem a seguir para responder a próxima pergunta.</h2>
+                                        <p></p>
+                                    </div>
+                                    <div className="image-container">
+                                        <img src={MapaEutro1}></img>
+                                    </div>
+                                    <div className="text">
+                                        <p>
+                                        </p>
+                                    </div>
+                                </InformativeSectionStage>
+                            ),
+
+                        },
+                        {
+                            displayMap: false,
+                            fallbackImage: LagoEutro,
+                            next: 3,
                             component: (
                                 <OnlyOneQuestion
                                     questionText={" Então, com base na imagem explicativa acima, qual das alternativas seria a correta para explicar esse fenômeno? "}
@@ -545,7 +566,7 @@ const getMissionsByDifficulty = (difficulty) => {
                                         },
                                     ]}
                                     correctAnswerId={null}
-                                    nextStage={2}
+                                    nextStage={3}
                                 />
                             ),
                         },
