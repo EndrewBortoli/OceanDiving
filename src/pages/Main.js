@@ -108,11 +108,11 @@ function Main({ missions }) {
   };
 
   // State to hold the difficulty level
-  const [difficulty, setDifficulty] = useState('MEDIUM'); // Default value
+  const [difficulty, setDifficulty] = useState('MÉDIO'); // Default value
 
   useEffect(() => {
     // Get the selected difficulty from localStorage
-    const savedDifficulty = localStorage.getItem('selectedDifficulty') || 'MEDIUM';
+    const savedDifficulty = localStorage.getItem('selectedDifficulty') || 'MÉDIO';
     setDifficulty(savedDifficulty); // Update the state with the saved difficulty
   }, []);
 

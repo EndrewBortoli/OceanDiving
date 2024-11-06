@@ -47,7 +47,7 @@ function Ocean({ speed }) {
 }
 
 export default function App() {
-  const [difficulty, setDifficulty] = useState('MEDIUM');
+  const [difficulty, setDifficulty] = useState('MÉDIO');
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef(new Audio(backgroundMusic));
 
@@ -64,11 +64,11 @@ export default function App() {
 
   const getSpeed = () => {
     switch (difficulty) {
-      case 'EASY':
+      case 'FÁCIL':
         return 0.5;
-      case 'MEDIUM':
+      case 'MÉDIO':
         return 1;
-      case 'HARD':
+      case 'DÍFICIL':
         return 2;
       default:
         return 1;

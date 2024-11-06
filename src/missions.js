@@ -63,7 +63,6 @@ import EmblemaSubmerged from './assets/emblemasubmerged.jpg';
 
 
 import EmblemaCongrats from './assets/emblematartarugacongrats.jpg';
-import EmblemaInicio from './assets/emblemainicio.jpg';
 
 //pulei linhas pra não arriscar de dar erro depois. depois pode apagar
 import MapaAntartica from './assets/oceandiving/mission4/antartica_mapa.png';
@@ -73,7 +72,7 @@ import Geleira from './assets/oceandiving/mission4/img_introducao.jpg';
 // Função que retorna as missões com base no nível de dificuldade
 const getMissionsByDifficulty = (difficulty) => {
     switch (difficulty) {
-        case 'EASY':
+        case 'FÁCIL':
             return [
                 {
                     index: 0,
@@ -830,7 +829,7 @@ const getMissionsByDifficulty = (difficulty) => {
                 }
             ];
 
-        case 'MEDIUM':
+        case 'MÉDIO':
             return [
                 {
                     index: 0,

@@ -4,14 +4,14 @@ function DifficultyButtons({ difficulty, onSelect }) {
   return (
     <div className="difficulty-buttons">
       <button
-        className={`button ${difficulty === "easy" ? "selected" : ""}`}
-        onClick={() => onSelect("easy")}
+        className={`button ${difficulty === "FÁCIL" ? "selected" : ""}`}
+        onClick={() => onSelect("FÁCIL")}
       >
         EASY
       </button>
       <button
         className={`button ${difficulty === "hard" ? "selected" : ""}`}
-        onClick={() => onSelect("hard")}
+        onClick={() => onSelect("HARD")}
       >
         HARD
       </button>

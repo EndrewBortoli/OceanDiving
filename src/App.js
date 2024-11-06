@@ -9,12 +9,12 @@ import getMissionsByDifficulty from './missions'; // Correct path to import
 
 function App() {
   const missionPageRef = useRef(); // Create a ref for the MissionPage
-  const [difficulty, setDifficulty] = useState('EASY'); // Default difficulty
+  const [difficulty, setDifficulty] = useState('FÁCIL'); // Default difficulty
   const [missions, setMissions] = useState(getMissionsByDifficulty(difficulty)); // Get missions based on difficulty
 
   // UseEffect to get the selected difficulty from localStorage
   useEffect(() => {
-    const savedDifficulty = localStorage.getItem('selectedDifficulty') || 'EASY';
+    const savedDifficulty = localStorage.getItem('selectedDifficulty') || 'FÁCIL';
     setDifficulty(savedDifficulty);
   }, []);
 
