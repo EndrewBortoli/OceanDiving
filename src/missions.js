@@ -757,16 +757,99 @@ const getMissionsByDifficulty = (difficulty) => {
                             ),
                         },
                         {
+                            // essa questão aparece se selecionar a "a" da 3
+                            displayMap: false,
+                            fallbackImage: GeloDerretendo,
+                            next: 3,
+                            component: (
+                                <OnlyOneQuestion
+                                    questionText={" Se os animais não sobreviverem, o ecossistema marinho se desordena. Consegue dizer o porquê?"}
+                                    options={[
+                                        {
+                                            id: 'a',
+                                            text: "A cadeia alimentar fica bagunçada, já que não tem animais o suficiente.",
+                                            explanation: "Sim, isso aí! Se um animal desaparecer, outros animais e plantas sofrem com isso. Por exemplo, se os animais que caçam sumirem, os animais caçados podem se multiplicar demais e acabar com as plantas.",
+                                        },
+                                        {
+                                            id: 'b',
+                                            text: "Como há menos peixes na água, o nível do mar diminui e os mares secam",
+                                            explanation: "A resposta está incorreta, já que o nível do mar não depende da quantidade de peixes. Na verdade, o nível do mar está aumentando por causa do derretimento do gelo!",
+
+                                            id: 'c',
+                                            text: " A perda de biodiversidade deixa os ecossistemas mais fracos.",
+                                            explanation: "Correto! Se tem mais variedade de seres em um ecossistema ele consegue se recuperar mais rápido, já que cada ser tem um trabalho específico.",
+                                        },
+                                    ]}
+                                    correctAnswerId={null}   
+                                    nextStage={3}
+                                />
+                            ),
+                        },
+                        {
+                            // essa questão aparece se selecionar a "b" da 3
+                            displayMap: false,
+                            fallbackImage: GeloDerretendo,
+                            next: 3,
+                            component: (
+                                <OnlyOneQuestion
+                                    questionText={"Com as mudanças climáticas, os ecossistemas marinhos se desordenam. Consegue dizer o porquê?"}
+                                    options={[
+                                        {
+                                            id: 'a',
+                                            text: "Os animais suam muito e se desidratam.",
+                                            explanation: "Não é bem isso. Os animais marinhos não suam, então não sofrem com esse problema."
+                                        },
+                                        {
+                                            id: 'b',
+                                            text: "A temperatura do mar aumenta e prejudica os animais.",
+                                            explanation: "A resposta está incorreta, já que o nível do mar não depende da quantidade de peixes. Na verdade, o nível do mar está aumentando por causa do derretimento do gelo!",
+
+                                            id: 'c',
+                                            text: " A perda de biodiversidade deixa os ecossistemas mais fracos.",
+                                            explanation: "Correto! Se tem mais variedade de seres em um ecossistema ele consegue se recuperar mais rápido, já que cada ser tem um trabalho específico."
+                                        },
+                                    ]}
+                                    correctAnswerId={null}   
+                                    nextStage={3}
+                                />
+                            ),
+                        },
+                        {
+                            // essa questão aparece se selecionar a "b" da 3
+                            displayMap: false,
+                            fallbackImage: GeloDerretendo,
+                            next: 4,
+                            component: (
+                                <OnlyOneQuestion
+                                    questionText={" Se os animais não sobreviverem, o ecossistema marinho se desordena. Consegue dizer o porquê?"}
+                                    options={[
+                                        {
+                                            id: 'a',
+                                            text: "A cadeia alimentar fica bagunçada, já que não tem animais o suficiente.",
+                                            explanation: "Sim, isso aí! Se um animal desaparecer, outros animais e plantas sofrem com isso. Por exemplo, se os animais que caçam sumirem, os animais caçados podem se multiplicar demais e acabar com as plantas."
+                                        },
+                                        {
+                                            id: 'b',
+                                            text: "Como há menos peixes na água, o nível do mar diminui e os mares secam",
+                                            explanation: "A resposta está incorreta, já que o nível do mar não depende da quantidade de peixes. Na verdade, o nível do mar está aumentando por causa do derretimento do gelo!"
+                                        },
+                                    ]}
+                                    correctAnswerId={null}   
+                                    nextStage={4}
+                                />
+                            ),
+                        },
+                        {
                             displayMap: true,
                             component: (
                                 <FinalStage
                                     onArrival={() => console.log('Final stage reached!')}
                                     briefing={{
-                                        title: "Tiny Travelers with Big Effects!",
-                                        location: "Mauritania",
+                                        title: "Parabéns, você concluiu a missão!",
+                                        location: "Antártica",
                                         image: mauritania,
                                         report: "",
-                                        reportAll: "Congratulations, fellow scientist! We’ve explored the fascinating world of aerosols and their impact on phytoplankton, uncovering how the wind, desert, and ocean work together in surprising ways. From tiny particles floating in the air to nutrient-packed dust delivered by the wind, we now know that aerosols play a big role in shaping ecosystems like the vibrant marine life along Mauritania’s coast. Mission Complete: The Grand Wrap-Up: Throughout this journey, we’ve learned that nature is a vast, interconnected system where even the smallest things, like aerosols, can have powerful effects—some good, some not so much. By examining satellite images, forming hypotheses, and understanding the role of aerosols, we’ve gained valuable insights into how these microscopic particles help sustain life in our oceans. As we wrap up this mission, remember that the mysteries of nature are always waiting to be explored! With every new piece of information, we unlock more secrets, helping us not only to understand the world around us but also to protect it for the future."
+                                        reportAll: "Agora você sabe muito mais sobre a mudança de temperatura e seus impactos. Sabia que algumas questões têm mais de uma reposta correta? Se quiser, selecione a missão no globo e faça-a novamente para adquirir mais conhecimento sobre o assunto"
                                     }}
                                     badge={{
                                         name: "Tiny Travelers with Big Effects!",
