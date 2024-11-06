@@ -16,6 +16,8 @@ import mudMistery from '../assets/badges/mud-mistery.png';
 import springs from '../assets/badges/springs.png';
 import geral from '../assets/badges/badge_geral.jpg';
 
+import waterNormalsTexture from '../assets/waternormals.jpeg'
+
 extend({ Water });
 
 function Ocean({ speed }) {
