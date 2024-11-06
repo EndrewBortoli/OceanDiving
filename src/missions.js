@@ -63,7 +63,6 @@ import pescaartesanal from './assets/oceandiving/mission2/pescaartesanal.jpg';
 import carrinhofumaça from './assets/oceandiving/mission2/carro-soltando-fumaça-preta.png';
 import industria from './assets/oceandiving/mission2/efeito-estufa.jpg';
 import longbeach from './assets/oceandiving/mission2/long-beach.jpg';
-<<<<<<< Updated upstream
 import agua from './assets/oceandiving/mission2/iStock-822555200.webp';
 import pexe from './assets/oceandiving/mission2/pexe.jpg';
 import TemperaturaAumentando from './assets/oceandiving/mission4/temperaturas_aumentando.webp';
@@ -72,8 +71,6 @@ import EmblemaSubmerged from './assets/emblemasubmerged.jpg';
 
 
 import EmblemaCongrats from './assets/emblematartarugacongrats.jpg';
-=======
->>>>>>> Stashed changes
 
 //pulei linhas pra não arriscar de dar erro depois. depois pode apagar
 import MapaAntartica from './assets/oceandiving/mission4/antartica_mapa.png';
@@ -809,13 +806,8 @@ const getMissionsByDifficulty = (difficulty) => {
                         {
                             // essa questão aparece se selecionar a "b" da 3
                             displayMap: false,
-<<<<<<< Updated upstream
                             fallbackImage: TemperaturaAumentando,
                             next: 4,
-=======
-                            fallbackImage: GeloDerretendo,
-                            next: 3,
->>>>>>> Stashed changes
                             component: (
                                 <OnlyOneQuestion
                                     questionText={"Com as mudanças climáticas, os ecossistemas marinhos se desordenam. Consegue dizer o porquê?"}
