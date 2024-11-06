@@ -42,6 +42,14 @@ import CoraisPesca from './assets/oceandiving/mission1/coraisredefantasma.png';
 import Eutrofizado1 from './assets/oceandiving/mission3/eutrofizado02.jpg';
 import RedeFantasma from './assets/oceandiving/mission1/redefantasma.jpg';
 import FotoCoralBonita from './assets/oceandiving/mission1/marbrasilcosta.jpg';
+import TartarugaNemo from './assets/oceandiving/mission1/tartaruganemo.jpg';
+import EcossistemaMarinho from './assets/oceandiving/mission1/ecossistemamarinho.jpg';
+
+import MapaEutro1 from './assets/oceandiving/mission3/eurotrificacaomapa1.webp';
+import LagoEutro from './assets/oceandiving/mission3/eutro.webp';
+import golfomexico2 from './assets/oceandiving/mission3/golfomexico2.jpg';
+
+
 import Corais from './assets/oceandiving/mission2/corais.jpg';
 import StartMission2 from './assets/oceandiving/mission2/acidificação main.jpg';
 import questao2 from './assets/oceandiving/mission2/image560x340cropped.jpg';
@@ -54,7 +62,7 @@ import longbeach from './assets/oceandiving/mission2/long-beach.jpg';
 //pulei linhas pra não arriscar de dar erro depois. depois pode apagar
 import MapaAntartica from './assets/oceandiving/mission4/antartica_mapa.png';
 import GeloDerretendo from './assets/oceandiving/mission4/gelo_derretendo.jpg';
-import Geleira from './assets/oceandiving/mission4/img_introducao.jpg'
+import Geleira from './assets/oceandiving/mission4/img_introducao.jpg';
 
 // Função que retorna as missões com base no nível de dificuldade
 const getMissionsByDifficulty = (difficulty) => {
@@ -120,7 +128,7 @@ const getMissionsByDifficulty = (difficulty) => {
                         },
                         {
                             displayMap: false,
-                            fallbackImage: pace_maine,
+                            fallbackImage: CostaBrasileira,
                             next: 2,
                             component: (
                                 <InformativeSectionStage nextStage={2}>
@@ -203,27 +211,26 @@ const getMissionsByDifficulty = (difficulty) => {
                                         { id: 'c', text: ' Recolher materiais de pesca abandonados e incentivar o uso de alternativas 	mais seguras para a vida marinha. ', explanation: 'Certíssimo, explorador! Remover redes abandonadas e buscar alternativas seguras são ações importantes para preservar os ecossistemas. Torne-se um ajudante do mundo e explore os mares!! ' },
                                         
                                     ]}
-                                    correctAnswerId={'a'}
+                                    correctAnswerId={null}
                                     nextStage={5}  // Ensure this links correctly
                                 />
                             ),
                         },
                         {
                             displayMap: false,
-                            fallbackImage: pace_water,
+                            fallbackImage: EcossistemaMarinho,
                             next: 6,
                             component: (
                                 <InformativeSectionStage nextStage={6}> {/* Update nextStage properly */}
                                     <div className="mission-card-header">
-                                        <h2>The answer is: Algae</h2>
-                                        <h4>Here's some quick facts about it!</h4>
+                                        <h2>CUIDE DO NOSSO ECOSSISTEMA!</h2>
+                                        <h4>Você pode fazer a diferença!</h4>
                                     </div>
                                     <div className="image-container">
-                                        <img src={phytoplankton}></img>
+                                        <img src={TartarugaNemo}></img>
                                     </div>
                                     <div className="text">
-                                        <p>Phytoplankton are like tiny algae that live in the ocean, lakes, and rivers. Even though they're super small, they’re really important because they make food from sunlight, just like plants in a garden! They also give off oxygen, which helps animals (and us!) breathe. You can think of them as the ocean’s little helpers, keeping everything healthy and full of life!
-                                            Here’s a fun fact! For a long time, people thought the Amazon rainforest was the ‘lungs of the Earth’ because of all the oxygen it produces. But guess what? It’s actually these tiny ocean algae, called phytoplankton, that do most of the work! They make most of the oxygen we breathe, so even though they’re small, they’re true heroes of the planet!
+                                        <p>
                                         </p>
                                     </div>
                                 </InformativeSectionStage>
@@ -238,9 +245,9 @@ const getMissionsByDifficulty = (difficulty) => {
                                         {
                                             lat: 42.81671,
                                             lng: -69.95354,
-                                            image: maine_to_george,
-                                            title: "This is the coast we were looking at!",
-                                            text: "With the satellite image we could see all its beauty!",
+                                            image: FocaPesca,
+                                            title: "Olá, explorador!",
+                                            text: "Agora você sabe os riscos da pesca fantasma! Espero que tenha se divetido! ",
                                             zoom: 7,
                                         }
                                     ]}
@@ -253,14 +260,14 @@ const getMissionsByDifficulty = (difficulty) => {
                             component: <FinalStage
                                 onArrival={() => console.log('Final stage reached!')}
                                 briefing={{
-                                    title: "North America from Above",
-                                    location: "Northeastern US and Canada",
+                                    title: "Pesca Fantasma",
+                                    location: "Costa Brasileira",
                                     image: pace_maine,
                                     report: "Congratulations! You’ve completed your first mission! Your skills are amazing, and we can’t wait to have your help on our next big adventure!",
-                                    reportAll: "We’ve seen how it’s way smarter to act before a problem pops up, but when things do go wrong, we can’t just sit back. In today’s example, we talked about mud, but oil spills are a whole other story. They can be even nastier, sticking around much longer and causing bigger damage to marine life. Oil doesn’t just muddy the water, it coats everything, from fish to birds, making it hard for ecosystems to bounce back. The cool thing about using images is that they don’t just show us what’s happening, they give us clues about what might happen next! They help us track where the mud, oil, or any other mess is headed. With that info, we can figure out which areas might be in trouble and jump in with protective measures. Whether it’s blocking the spill, setting up barriers, or getting cleanup crews to the right spot, these images are like treasure maps showing us the best path to take. And even after the initial cleanup, we can keep an eye on things. Satellite images and other tools let us monitor how nature is recovering and make sure it gets back to its full strength. By acting early, responding quickly, and using tech to guide us, we can help protect our bays, rivers, and oceans from the messes that threaten the"
+                                    reportAll: "Parabéns! 🚀 Você foi incrível nessa missão e aprendeu como é essencial agir antes que o problema da pesca fantasma saia do controle. Quando redes e outros materiais são deixados no mar, eles não só prejudicam o oceano, mas também causam danos profundos em toda a biodiversidade marinha. A gente viu o impacto que isso pode ter nos corais, nas tartarugas e em tantos outros seres marinhos.A boa notícia? Você agora sabe o quanto é importante cuidar e agir! Com a ajuda de tecnologias e ferramentas como imagens e monitoramento, é possível identificar áreas de risco e entrar em ação. Assim, podemos proteger nossos mares e garantir que esses ecossistemas fiquem fortes e cheios de vida. Que essa missão inspire você a explorar mais e cuidar cada vez melhor dos nossos oceanos! 🌊🐢"
                                 }}
                                 badge={{
-                                    name: "North America from Above Mission Emblem",
+                                    name: "Emblema da Missão de Pesca Fantasma",
                                     image: badgeFigure
                                 }}
                             />
@@ -464,7 +471,7 @@ const getMissionsByDifficulty = (difficulty) => {
                     location: "Golfo do México",
                     image: GolfeDoMexico,
                     text: "O Golfo do México é uma vasta bacia oceânica localizada entre a América do Norte e a América Central, sendo considerado o maior golfo do mundo. Ele cobre uma área de aproximadamente 1,5 milhões de km² e possui um volume de cerca de 2.400 mil km³. Suas águas banham os Estados Unidos, incluindo estados como Flórida, Alabama, Mississippi, Louisiana e Texas; o México, com estados como Tamaulipas e Veracruz; e, a ilha de Cuba. ",
-                    displayMap: true,
+                    displayMap: false,
                     fallbackImage: oman_pace,
                     csvPath: omanData,
                     initialViewState: {
@@ -529,7 +536,7 @@ const getMissionsByDifficulty = (difficulty) => {
                         },
                         {
                             displayMap: false,
-                            fallbackImage: null,
+                            fallbackImage: LagoEutro,
                             next: 2,
                             component: (
                                 <OnlyOneQuestion
@@ -556,30 +563,10 @@ const getMissionsByDifficulty = (difficulty) => {
                                 />
                             ),
                         },
+                       
                         {
-                            displayMap: true,
-                            fallbackImage: null,
-                            next: 3,
-                            component: (
-                                <InformativeSectionStage nextStage={3}>
-                                    <div className="mission-card-header">
-                                        <h2>Phytoplankton</h2>
-                                        <h4>Here's some quick facts about it!</h4>
-                                    </div>
-                                    <div className="image-container">
-                                        <img src={phytoplankton}></img>
-                                    </div>
-                                    <div className="text">
-                                        <p>The food chain is kind of like nature’s dinner party! It’s all about who’s eating and who’s being eaten, with energy passing along the line. It starts with the chefs—plants and tiny phytoplankton—that whip up energy from sunlight. Then, little critters like zooplankton come along for a bite. After that, small fish snack on those critters, and bigger fish come in to munch on the smaller ones. It keeps going until we get to the ocean’s top diners, like sharks or whales!
-                                            Phytoplankton are the tiny heroes at the base of this party. Without them, no one else gets to eat, and the whole chain could fall apart. So, they’re super important to keep the food chain running smoothly!
-                                        </p>
-                                    </div>
-                                </InformativeSectionStage>
-                            ),
-                        },
-                        {
-                            displayMap: true,
-                            fallbackImage: null,
+                            displayMap: false,
+                            fallbackImage: golfomexico2,
                             next: 4,
                             component: (
                                 <OnlyOneQuestion
@@ -666,7 +653,7 @@ const getMissionsByDifficulty = (difficulty) => {
                     location: "Antártica",
                     image: Geleira,
                     text: "Da primeira revolução mundial até hoje, as emissões de gases estufa foram apenas aumentado, assim como as temperaturas do oceanos. Isso é extremamente preocupante pois temperaturas desreguladas impactam negativamente em ecossistemas marinhos, qualidade de vida dos animais e podem também causar o aumento do nível do mar, outro problema grave que possui consequências catastróficas",
-                    displayMap: true,
+                    displayMap: false,
                     fallbackImage: Geleira,
                     csvPath: omanData,
                     initialViewState: {
@@ -754,16 +741,99 @@ const getMissionsByDifficulty = (difficulty) => {
                             ),
                         },
                         {
+                            // essa questão aparece se selecionar a "a" da 3
+                            displayMap: false,
+                            fallbackImage: GeloDerretendo,
+                            next: 3,
+                            component: (
+                                <OnlyOneQuestion
+                                    questionText={" Se os animais não sobreviverem, o ecossistema marinho se desordena. Consegue dizer o porquê?"}
+                                    options={[
+                                        {
+                                            id: 'a',
+                                            text: "A cadeia alimentar fica bagunçada, já que não tem animais o suficiente.",
+                                            explanation: "Sim, isso aí! Se um animal desaparecer, outros animais e plantas sofrem com isso. Por exemplo, se os animais que caçam sumirem, os animais caçados podem se multiplicar demais e acabar com as plantas.",
+                                        },
+                                        {
+                                            id: 'b',
+                                            text: "Como há menos peixes na água, o nível do mar diminui e os mares secam",
+                                            explanation: "A resposta está incorreta, já que o nível do mar não depende da quantidade de peixes. Na verdade, o nível do mar está aumentando por causa do derretimento do gelo!",
+
+                                            id: 'c',
+                                            text: " A perda de biodiversidade deixa os ecossistemas mais fracos.",
+                                            explanation: "Correto! Se tem mais variedade de seres em um ecossistema ele consegue se recuperar mais rápido, já que cada ser tem um trabalho específico.",
+                                        },
+                                    ]}
+                                    correctAnswerId={null}   
+                                    nextStage={3}
+                                />
+                            ),
+                        },
+                        {
+                            // essa questão aparece se selecionar a "b" da 3
+                            displayMap: false,
+                            fallbackImage: GeloDerretendo,
+                            next: 3,
+                            component: (
+                                <OnlyOneQuestion
+                                    questionText={"Com as mudanças climáticas, os ecossistemas marinhos se desordenam. Consegue dizer o porquê?"}
+                                    options={[
+                                        {
+                                            id: 'a',
+                                            text: "Os animais suam muito e se desidratam.",
+                                            explanation: "Não é bem isso. Os animais marinhos não suam, então não sofrem com esse problema."
+                                        },
+                                        {
+                                            id: 'b',
+                                            text: "A temperatura do mar aumenta e prejudica os animais.",
+                                            explanation: "A resposta está incorreta, já que o nível do mar não depende da quantidade de peixes. Na verdade, o nível do mar está aumentando por causa do derretimento do gelo!",
+
+                                            id: 'c',
+                                            text: " A perda de biodiversidade deixa os ecossistemas mais fracos.",
+                                            explanation: "Correto! Se tem mais variedade de seres em um ecossistema ele consegue se recuperar mais rápido, já que cada ser tem um trabalho específico."
+                                        },
+                                    ]}
+                                    correctAnswerId={null}   
+                                    nextStage={3}
+                                />
+                            ),
+                        },
+                        {
+                            // essa questão aparece se selecionar a "b" da 3
+                            displayMap: false,
+                            fallbackImage: GeloDerretendo,
+                            next: 4,
+                            component: (
+                                <OnlyOneQuestion
+                                    questionText={" Se os animais não sobreviverem, o ecossistema marinho se desordena. Consegue dizer o porquê?"}
+                                    options={[
+                                        {
+                                            id: 'a',
+                                            text: "A cadeia alimentar fica bagunçada, já que não tem animais o suficiente.",
+                                            explanation: "Sim, isso aí! Se um animal desaparecer, outros animais e plantas sofrem com isso. Por exemplo, se os animais que caçam sumirem, os animais caçados podem se multiplicar demais e acabar com as plantas."
+                                        },
+                                        {
+                                            id: 'b',
+                                            text: "Como há menos peixes na água, o nível do mar diminui e os mares secam",
+                                            explanation: "A resposta está incorreta, já que o nível do mar não depende da quantidade de peixes. Na verdade, o nível do mar está aumentando por causa do derretimento do gelo!"
+                                        },
+                                    ]}
+                                    correctAnswerId={null}   
+                                    nextStage={4}
+                                />
+                            ),
+                        },
+                        {
                             displayMap: true,
                             component: (
                                 <FinalStage
                                     onArrival={() => console.log('Final stage reached!')}
                                     briefing={{
-                                        title: "Tiny Travelers with Big Effects!",
-                                        location: "Mauritania",
+                                        title: "Parabéns, você concluiu a missão!",
+                                        location: "Antártica",
                                         image: mauritania,
                                         report: "",
-                                        reportAll: "Congratulations, fellow scientist! We’ve explored the fascinating world of aerosols and their impact on phytoplankton, uncovering how the wind, desert, and ocean work together in surprising ways. From tiny particles floating in the air to nutrient-packed dust delivered by the wind, we now know that aerosols play a big role in shaping ecosystems like the vibrant marine life along Mauritania’s coast. Mission Complete: The Grand Wrap-Up: Throughout this journey, we’ve learned that nature is a vast, interconnected system where even the smallest things, like aerosols, can have powerful effects—some good, some not so much. By examining satellite images, forming hypotheses, and understanding the role of aerosols, we’ve gained valuable insights into how these microscopic particles help sustain life in our oceans. As we wrap up this mission, remember that the mysteries of nature are always waiting to be explored! With every new piece of information, we unlock more secrets, helping us not only to understand the world around us but also to protect it for the future."
+                                        reportAll: "Agora você sabe muito mais sobre a mudança de temperatura e seus impactos. Sabia que algumas questões têm mais de uma reposta correta? Se quiser, selecione a missão no globo e faça-a novamente para adquirir mais conhecimento sobre o assunto"
                                     }}
                                     badge={{
                                         name: "Tiny Travelers with Big Effects!",
