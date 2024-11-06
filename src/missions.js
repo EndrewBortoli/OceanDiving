@@ -56,8 +56,8 @@ import maiscorais from './assets/oceandiving/mission2/O-que-e-a-acidificacao-dos
 import longbeach from './assets/oceandiving/mission2/long-beach.jpg';
 import agua from './assets/oceandiving/mission2/iStock-822555200.webp';
 import pexe from './assets/oceandiving/mission2/pexe.jpg';
-import TemperaturaAumentando from './assets/oceandiving/mission4/temperaturas_aumentando.webp'
-
+import TemperaturaAumentando from './assets/oceandiving/mission4/temperaturas_aumentando.webp';
+import EmblemaSubmerged from './assets/emblemasubmerged.jpg';
 
 
 import EmblemaCongrats from './assets/emblematartarugacongrats.jpg';
