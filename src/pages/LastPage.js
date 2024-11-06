@@ -14,8 +14,7 @@ import bloom from '../assets/badges/bloom.png';
 import cyano from '../assets/badges/cyano.png';
 import mudMistery from '../assets/badges/mud-mistery.png';
 import springs from '../assets/badges/springs.png';
-import waterNormalsTexture from '../assets/waternormals.jpeg';
-
+import geral from '../assets/badges/badge_geral.jpg';
 
 extend({ Water });
 
@@ -147,8 +146,8 @@ export default function App() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 3, staggerChildren: 0.2 }}
         >
-          <motion.img src={aerosols} alt="Aerosols Badge" style={{ width: '80px' }} />
-          <motion.img src={bloom} alt="Bloom Badge" style={{ width: '80px' }} />
+          <motion.img src={geral} alt="Emblema Geral" style={{ width: '80px' }} />
+          <motion.img src={bloom} alt="Bloom Bade" style={{ width: '80px' }} />
           <motion.img src={cyano} alt="Cyano Badge" style={{ width: '80px' }} />
           <motion.img src={mudMistery} alt="Mud Mistery Badge" style={{ width: '80px' }} />
           <motion.img src={springs} alt="Springs Badge" style={{ width: '80px' }} />
