@@ -175,7 +175,7 @@ function Main({ missions }) {
         padding: '10px',
         borderRadius: '5px'
       }}>
-        Difficulty: {difficulty}
+        Dificuldade: {difficulty}
       </div>
     </div>
   );
