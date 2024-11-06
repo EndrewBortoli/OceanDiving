@@ -55,7 +55,10 @@ import pescaartesanal from './assets/oceandiving/mission2/pescaartesanal.jpg';
 import carrinhofumaça from './assets/oceandiving/mission2/carro-soltando-fumaça-preta.png';
 import industria from './assets/oceandiving/mission2/efeito-estufa.jpg';
 import longbeach from './assets/oceandiving/mission2/long-beach.jpg';
-import TemperaturaAumentando from './assets/oceandiving/mission4/temperaturas_aumentando.webp'
+import agua from './assets/oceandiving/mission2/iStock-822555200.webp';
+import pexe from './assets/oceandiving/mission2/pexe.jpg';
+import TemperaturaAumentando from './assets/oceandiving/mission4/temperaturas_aumentando.webp';
+import EmblemaSubmerged from './assets/emblemasubmerged.jpg';
 
 
 
@@ -779,7 +782,7 @@ const getMissionsByDifficulty = (difficulty) => {
                             // essa questão aparece se selecionar a "b" da 3
                             displayMap: false,
                             fallbackImage: TemperaturaAumentando,
-                            next: 3,
+                            next: 4,
                             component: (
                                 <OnlyOneQuestion
                                     questionText={"Com as mudanças climáticas, os ecossistemas marinhos se desordenam. Consegue dizer o porquê?"}
@@ -797,31 +800,6 @@ const getMissionsByDifficulty = (difficulty) => {
                                             id: 'c',
                                             text: " A perda de biodiversidade deixa os ecossistemas mais fracos.",
                                             explanation: "Correto! Se tem mais variedade de seres em um ecossistema ele consegue se recuperar mais rápido, já que cada ser tem um trabalho específico."
-                                        },
-                                    ]}
-                                    correctAnswerId={null}   
-                                    nextStage={3}
-                                />
-                            ),
-                        },
-                        {
-                            // essa questão aparece se selecionar a "b" da 3
-                            displayMap: false,
-                            fallbackImage: GeloDerretendo,
-                            next: 4,
-                            component: (
-                                <OnlyOneQuestion
-                                    questionText={" Se os animais não sobreviverem, o ecossistema marinho se desordena. Consegue dizer o porquê?"}
-                                    options={[
-                                        {
-                                            id: 'a',
-                                            text: "A cadeia alimentar fica bagunçada, já que não tem animais o suficiente.",
-                                            explanation: "Sim, isso aí! Se um animal desaparecer, outros animais e plantas sofrem com isso. Por exemplo, se os animais que caçam sumirem, os animais caçados podem se multiplicar demais e acabar com as plantas."
-                                        },
-                                        {
-                                            id: 'b',
-                                            text: "Como há menos peixes na água, o nível do mar diminui e os mares secam",
-                                            explanation: "A resposta está incorreta, já que o nível do mar não depende da quantidade de peixes. Na verdade, o nível do mar está aumentando por causa do derretimento do gelo!"
                                         },
                                     ]}
                                     correctAnswerId={null}   
