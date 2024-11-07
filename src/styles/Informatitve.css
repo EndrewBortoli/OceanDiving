@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+*
+{
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select:none;
+  font-family: 'Poppins';
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#landingPage {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.waterWaveCanvas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  max-width: 1980px;
+  max-height: 1080px;
+  overflow: hidden;
+  position: relative;
+}
+
+#landingPageTextContainer {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}
+
+#startButton {
+  background-color: rgb(15, 16, 88);
+}
+
+#landingPage h1 {
+  font-size: 6rem;
+  color:rgb(15, 16, 88);
+  text-align: center;
+}
+
+#landingPage h2 {
+  font-size: 2rem;
+  text-align: center;
+  color: rgb(15, 16, 88);
+  margin-bottom: 2rem;
+}
+
+#landingPage h3 {
+  text-align: center;
+  color: rgb(15, 16, 88);
+  align-self: end;
+  position: fixed;
+}
+
+#landingPageContent {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding: 2vw;
+  display: grid;
+  place-items: center;
+}
+
+@media screen and (max-width: 1024px) {
+  #landingPageContent {
+    padding: 5vw;
+  }
+  #landingPage h1 {
+    line-height: 1.2;
+    font-size: 6rem;
+    text-align: left;
+  }
+  #landingPage h2 {
+    font-size: 2rem;
+    text-align: left;
+  }
+  #startButton {
+    align-self: left;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #landingPage h1 {
+    line-height: 1.2;
+    font-size: 4rem;
+  }
+  #landingPage h2 {
+    font-size: 1.5rem;
+  }
+}

@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-import React, { Suspense, useRef, useMemo, useState } from 'react';
+import React, { Suspense, useRef, useMemo, useState, useEffect } from 'react';
 import { Canvas, extend, useThree, useLoader, useFrame } from '@react-three/fiber';
 import { Sky } from '@react-three/drei';
 import { Water } from 'three-stdlib';
@@ -15,7 +15,6 @@ function Ocean({ speed }) {
   const ref = useRef();
   const gl = useThree((state) => state.gl);
 
-  // Load the water normals texture from the imported file
   const waterNormals = useLoader(THREE.TextureLoader, waterNormalsTexture); 
   waterNormals.wrapS = waterNormals.wrapT = THREE.RepeatWrapping;
 
@@ -43,19 +42,29 @@ function Ocean({ speed }) {
 
 export default function App() {
   const [difficulty, setDifficulty] = useState('MÉDIO');
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [isMuted, setIsMuted] = useState(false);
   const audioRef = useRef(new Audio(backgroundMusic));
   const navigate = useNavigate();
 
-  const toggleAudio = () => {
+  useEffect(() => {
     const audio = audioRef.current;
-    if (isPlaying) {
+    audio.loop = true;
+    audio.volume = 1;
+    audio.muted = true;
+    
+    audio.play().then(() => {
+      audio.muted = false;
+    }).catch((error) => console.log("Falha ao iniciar o áudio automaticamente:", error));
+    
+    return () => {
       audio.pause();
-    } else {
-      audio.loop = true;
-      audio.play().catch((error) => console.log('Audio play failed:', error));
-    }
-    setIsPlaying(!isPlaying);
+    };
+  }, []);
+
+  const toggleMute = () => {
+    const audio = audioRef.current;
+    audio.muted = !isMuted;
+    setIsMuted(!isMuted);
   };
 
   const getSpeed = () => {
@@ -80,6 +89,10 @@ export default function App() {
     navigate("/main");
   };
 
+  const goToHelpPage = () => {
+    navigate("/informative"); // Redireciona para a página de ajuda
+  };
+
   return (
     <>
       <div className="canvas-container">
@@ -98,23 +111,46 @@ export default function App() {
         <LpContent setDifficulty={setDifficultyAndSave} />
       </div>
 
+      {/* Botão de Mute */}
       <button
-        onClick={toggleAudio}
+        onClick={toggleMute}
         style={{
           position: 'absolute',
           top: '20px',
           left: '20px',
           zIndex: 11,
           padding: '10px 20px',
-          backgroundColor: isPlaying ? '#ECAA01' : '#1CAAD9',
+          backgroundColor: isMuted ? 'rgb(15, 16, 88)' : '#1CAAD9',
           color: 'white',
           border: 'none',
           borderRadius: '5px',
           cursor: 'pointer'
         }}
       >
-        {isPlaying ? 'Mute' : 'Unmute'}
+        {isMuted ? 'Unmute' : 'Mute'}
       </button>
+
+      {/* Botão de Interrogação */}
+      <button
+        onClick={goToHelpPage}
+        style={{
+          position: 'absolute',
+          bottom: '20px',
+          left: '20px',
+          zIndex: 11,
+          padding: '10px 20px',
+          backgroundColor: '#1CAAD9',
+          color: 'white',
+          border: 'none',
+          borderRadius: '50%',
+          cursor: 'pointer',
+          fontSize: '18px',
+          fontWeight: 'bold',
+        }}
+      >
+        ?
+      </button>
+
       <button className="start-mission-button" onClick={goToNextPage}>
         COMEÇAR MISSÃO
       </button>

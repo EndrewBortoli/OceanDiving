@@ -4,6 +4,7 @@ import Main from './pages/Main';
 import MissionPage from './pages/MissionPage';
 import DifficultyPage from './pages/DifficultyPage';
 import LastPage from './pages/LastPage';
+import InformativePage from './pages/InformativePage';
 import './styles/App.css';
 import getMissionsByDifficulty from './missions'; // Correct path to import
 
@@ -37,6 +38,7 @@ function App() {
         <Route path="/" element={<DifficultyPage setDifficulty={setDifficulty} />} />
         <Route path="/main" element={<Main missions={missions} />} />
         <Route path="/congratulations" element={<LastPage />} />
+        <Route path="/informative" element={<InformativePage />} />
         {missions.map((mission, index) => (
           <Route
             key={mission.index}
