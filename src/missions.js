@@ -406,13 +406,13 @@ const getMissionsByDifficulty = (difficulty) => {
                                 <InformativeSectionStage nextStage={5}>
                                     <div className="mission-card-header">
                                         <h2>A acidificação</h2>
-                                        <p>Com todo esse estudo, concluímos que a acidificação dos oceanos é um perigo! E como uma de suas causas, temos o efeito estufa que é um problemão também! Ele acontece quando alguns gases, como o dióxido de carbono (CO₂), ficam presos na atmosfera e deixam a Terra mais quente. Só que quando tem CO₂ demais, não é só o ar que sofre — os oceanos também!</p>
+                                        <p>A acidificação dos oceanos é um problema enorme! Quando o dióxido de carbono (CO₂) na atmosfera aumenta, ele é absorvido pelo oceano, deixando a água mais ácida. Isso faz mal para muitos seres marinhos, especialmente os que têm conchas, como ostras e corais. </p>
                                     </div>
                                     <div className="image-container">
                                         <img src={pexe}></img>
                                     </div>
                                     <div className="text">
-                                        <p>Esse gás, podendo ser emitido com a queima de combustíveis fósseis, desmatamento e até mesmo processos industriais acaba sendo absorvido pela água do mar e deixa ela mais ácida. Isso pode machucar os animais e plantas que vivem no oceano, prejudicando a biodiversidade marinha. Com o tempo, esse processo pode até fazer com que algumas espécies desapareçam, mudando o equilíbrio dos oceanos e impactando todo o planeta! E aí, prontos para a última pergunta?
+                                        <p> E os corais, por exemplo, são o lar de várias espécies no fundo do mar! Com a água mais ácida, eles ficam mais frágeis e podem até morrer, o que ameaça a biodiversidade marinha. Se nada mudar, espécies importantes podem desaparecer, desequilibrando o oceano e afetando todos nós!
                                         </p>
                                     </div>
                                 </InformativeSectionStage>
