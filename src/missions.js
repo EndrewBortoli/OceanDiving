@@ -400,16 +400,16 @@ const getMissionsByDifficulty = (difficulty) => {
                         },
                         {
                             displayMap: false,
-                            fallbackImage: industria,
+                            fallbackImage: agua,
                             next: 5,
                             component: (
                                 <InformativeSectionStage nextStage={5}>
                                     <div className="mission-card-header">
-                                        <h2>O efeito estufa</h2>
+                                        <h2>A acidificação</h2>
                                         <p>Com todo esse estudo, concluímos que a acidificação dos oceanos é um perigo! E como uma de suas causas, temos o efeito estufa que é um problemão também! Ele acontece quando alguns gases, como o dióxido de carbono (CO₂), ficam presos na atmosfera e deixam a Terra mais quente. Só que quando tem CO₂ demais, não é só o ar que sofre — os oceanos também!</p>
                                     </div>
                                     <div className="image-container">
-                                        <img src={carrinhofumaça}></img>
+                                        <img src={pexe}></img>
                                     </div>
                                     <div className="text">
                                         <p>Esse gás, podendo ser emitido com a queima de combustíveis fósseis, desmatamento e até mesmo processos industriais acaba sendo absorvido pela água do mar e deixa ela mais ácida. Isso pode machucar os animais e plantas que vivem no oceano, prejudicando a biodiversidade marinha. Com o tempo, esse processo pode até fazer com que algumas espécies desapareçam, mudando o equilíbrio dos oceanos e impactando todo o planeta! E aí, prontos para a última pergunta?
@@ -420,15 +420,15 @@ const getMissionsByDifficulty = (difficulty) => {
                         },
                         {
                             displayMap: false,
-                            fallbackImage: industria,
+                            fallbackImage: agua,
                             next: 6,
                             component: (
                                 <OnlyOneQuestion
-                                    questionText={"Como o aumento do dióxido de carbono (CO2) na atmosfera afeta o clima?"}
+                                    questionText={"Por que é importante aprender sobre a acidificação dos oceanos?"}
                                     options={[
-                                        { id: 'a', text: "Diminui a quantidade de chuva.", explanation: "Não é bem isso... O aumento do dióxido de carbono não diminui a quantidade de chuva diretamente. Então, pode causar sim mudanças nos padrões de precipitação levando a mais chuvas em algumas regiões e secas em outras. Assim, o impacto no clima é complexo!" },
-                                        { id: 'b', text: 'Contribui para o aquecimento global.', explanation: "Boa! O aumento do dióxido de carbono faz com que mais calor fique preso na atmosfera, resultando em temperaturas mais altas e mudanças climáticas. Isso pode causar eventos climáticos extremos, como secas e tempestades fortes!" },
-                                        { id: 'c', text: 'Ajuda a manter a temperatura da Terra estável.', explanation: "Na verdade, o dióxido de carbono tem um efeito oposto! Em vez de estabilizar a temperatura, ele age como um cobertor, aprisionando o calor na atmosfera e contribuindo para o aquecimento global." },
+                                        { id: 'a', text: "Porque ela faz os oceanos ficarem mais azuis.", explanation: "Não é bem assim! A acidificação dos oceanos não muda a cor da água, mas sim a sua composição, prejudicando os ecossistemas." },
+                                        { id: 'b', text: 'Porque assim podemos ajudar a proteger a vida marinha e o equilíbrio dos oceanos.', explanation: "Muito bem! Aprender sobre a acidificação nos ajuda a proteger os oceanos e todas as espécies que vivem neles." },
+                                        { id: 'c', text: 'Porque a acidificação dos oceanos torna a água mais limpa e saudável.', explanation: "Na verdade, a acidificação torna a água mais ácida, o que pode fazer mal para a vida marinha." },
                                     ]}
                                     correctAnswerId={null}
                                     nextStage={6}
@@ -436,7 +436,7 @@ const getMissionsByDifficulty = (difficulty) => {
                             ),
                         },
                         {
-                            displayMap: false,
+                            displayMap: true,
                             next: 7,
                             component: (
                                 <MapFocusStage nextStage={7}
@@ -444,7 +444,7 @@ const getMissionsByDifficulty = (difficulty) => {
                                         {
                                             lat: 40.35052,
                                             lng: -73.37517,
-                                            image: saginaw_pace,
+                                            image: longbeach,
                                             title: "A Long Beach é linda, mas pode precisar de uma ajudinha!",
                                             text: "Nós, humanos, impactamos o mundo ao nosso redor, olhe ao redor do nosso próprio ambiente, como você acha que pode mudá-lo? Como você acha que pode ajudar o mundo ao seu redor, os humanos, a terra e os oceanos?",
                                             zoom: 10,
@@ -463,7 +463,7 @@ const getMissionsByDifficulty = (difficulty) => {
                                         location: "Long Beach, Nova Iorque, EUA",
                                         image: saginaw_bay,
                                         report: "Muito bem! Graças à sua ajuda, descobrimos o que está acontecendo em Long Beach com todos esses problemas resultando na acidificação dos oceanos e começamos a pensar em maneiras inteligentes de consertar isso!",
-                                        reportAll: "Com todas essas perguntas e explicações, você aprendeu como o dióxido de carbono afeta os oceanos, como a pesca esportiva e a pesca fantasma impactam a vida marinha, e por que é tão importante cuidar do nosso planeta. Entender esses temas ajuda a proteger os ecossistemas e a biodiversidade marinha. Cada ação conta, e agora você sabe mais sobre como proteger os oceanos. Continue assim!"
+                                        reportAll: "Com todas essas perguntas e explicações, você aprendeu como o dióxido de carbono afeta os oceanos, como a pesca esportiva e a pesca fantasma impactam a vida marinha, e por que é tão importante cuidar do nosso planeta. Além disso, aprendeu sobre o impacto da pesca esportiva e da pesca fantasma, que causam grandes danos à biodiversidade, ameaçando várias espécies e comprometendo o equilíbrio dos ecossistemas. Esses temas mostram a importância de cuidarmos do nosso planeta, já que o oceano é essencial para a saúde do planeta e de todos nós. Entender essas questões e conscientizar outras pessoas são passos fundamentais para preservar nossos mares e suas riquezas naturais. Cada ação, por menor que pareça, contribui para a proteção dos ecossistemas e para o bem-estar de toda a biodiversidade marinha. E agora, você sabe mais sobre como proteger os oceanos. Continue assim!"
                                     }}
                                     badge={{
                                         name: "Emblema Acidificação dos Oceanos",
