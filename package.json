@@ -1,8 +1,8 @@
 {
-  "name": "nasa-space-app",
+  "name": "oceandiving",
   "version": "0.1.0",
   "homepage": "https://endrewbortoli.github.io/oceandiving",
-  "private": true,
+  "private": false,
   "start": "react-scripts --max_old_space_size=4096 start",
   "build": "react-scripts --max_old_space_size=256 build",
   "dependencies": {
