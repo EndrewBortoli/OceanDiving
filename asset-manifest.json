@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/oceandiving/static/css/main.39a8b95b.css",
-    "main.js": "/oceandiving/static/js/main.144eadbc.js",
-    "static/js/453.952c47cf.chunk.js": "/oceandiving/static/js/453.952c47cf.chunk.js",
+    "main.js": "/oceandiving/static/js/main.d433f7d3.js",
+    "static/js/453.64dec36d.chunk.js": "/oceandiving/static/js/453.64dec36d.chunk.js",
     "static/media/oman_winter_norm.csv": "/oceandiving/static/media/oman_winter_norm.9f6f2e63db526942abcf.csv",
     "static/media/earth-min-1.jpg": "/oceandiving/static/media/earth-min-1.31d08d87ec70cffe6365.jpg",
     "static/media/background_water.mp3": "/oceandiving/static/media/background_water.b04a573c31fa6bcb1984.mp3",
@@ -89,11 +89,11 @@
     "static/media/zonamorta mapa.webp": "/oceandiving/static/media/zonamorta mapa.f14614f7a06d526280cd.webp",
     "index.html": "/oceandiving/index.html",
     "main.39a8b95b.css.map": "/oceandiving/static/css/main.39a8b95b.css.map",
-    "main.144eadbc.js.map": "/oceandiving/static/js/main.144eadbc.js.map",
-    "453.952c47cf.chunk.js.map": "/oceandiving/static/js/453.952c47cf.chunk.js.map"
+    "main.d433f7d3.js.map": "/oceandiving/static/js/main.d433f7d3.js.map",
+    "453.64dec36d.chunk.js.map": "/oceandiving/static/js/453.64dec36d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.39a8b95b.css",
-    "static/js/main.144eadbc.js"
+    "static/js/main.d433f7d3.js"
   ]
 }
