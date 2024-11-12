@@ -1,7 +1,7 @@
 {
   "name": "oceandiving",
   "version": "0.1.0",
-  "homepage": "https://EndrewBortoli.github.io/OceanDiving",
+  "homepage": "https://endrewbortoli.github.io/OceanDiving",
   "private": false,
   "start": "react-scripts --max_old_space_size=4096 start",
   "build": "react-scripts --max_old_space_size=256 build",
