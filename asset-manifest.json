@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/OceanDiving/static/css/main.39a8b95b.css",
-    "main.js": "/OceanDiving/static/js/main.789b51d4.js",
+    "main.js": "/OceanDiving/static/js/main.e5d412b6.js",
     "static/js/453.64dec36d.chunk.js": "/OceanDiving/static/js/453.64dec36d.chunk.js",
     "static/media/oman_winter_norm.csv": "/OceanDiving/static/media/oman_winter_norm.9f6f2e63db526942abcf.csv",
     "static/media/earth-min-1.jpg": "/OceanDiving/static/media/earth-min-1.31d08d87ec70cffe6365.jpg",
@@ -89,11 +89,11 @@
     "static/media/zonamorta mapa.webp": "/OceanDiving/static/media/zonamorta mapa.f14614f7a06d526280cd.webp",
     "index.html": "/OceanDiving/index.html",
     "main.39a8b95b.css.map": "/OceanDiving/static/css/main.39a8b95b.css.map",
-    "main.789b51d4.js.map": "/OceanDiving/static/js/main.789b51d4.js.map",
+    "main.e5d412b6.js.map": "/OceanDiving/static/js/main.e5d412b6.js.map",
     "453.64dec36d.chunk.js.map": "/OceanDiving/static/js/453.64dec36d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.39a8b95b.css",
-    "static/js/main.789b51d4.js"
+    "static/js/main.e5d412b6.js"
   ]
 }
