@@ -132,7 +132,7 @@ const getMissionsByDifficulty = (difficulty) => {
                                     options={[
                                         { id: 'a', text: 'Uma tartaruga morta devido aos detritos de pesca.', explanation: 'Isso mesmo, que olhar afiado! Essa tartaruga foi afetada pelo problema da pesca fantasma e infelizmente morreu por conta disso.'},
                                         { id: 'b', text: 'Uma tartaruga em seu habitat natural, nadando livremente. ', explanation: 'Hmm, não é bem isso. Essa tartaruga não está nadando livremente. Ela está presa em uma rede, um problema típico da pesca fantasma. ' },
-                                        { id: 'c', text: 'Uma tartaruga sendo libertada por mergulhadores. . ', explanation: 'Boa tentativa, mas não foi isso que aconteceu. Essa tartaruga não foi salva por mergulhadores; ela acabou sendo vítima da pesca fantasma. ' }
+                                        { id: 'c', text: 'Uma tartaruga sendo libertada por mergulhadores. ', explanation: 'Boa tentativa, mas não foi isso que aconteceu. Essa tartaruga não foi salva por mergulhadores; ela acabou sendo vítima da pesca fantasma. ' }
                                     ]}
                                     correctAnswerId={null}
                                     nextStage={1}
@@ -181,7 +181,7 @@ const getMissionsByDifficulty = (difficulty) => {
                             next: 3,
                             component: (
                                 <OnlyOneQuestion
-                                    questionText={"Esta rede foi deixada no oceano. De acordo com seus conhecimentosque pode acontecer com os animais marinhos que encontram redes abandonadas como essa? "}
+                                    questionText={"Esta rede foi deixada no oceano. De acordo com seus conhecimentos, o que pode acontecer com os animais marinhos que encontram redes abandonadas como essa? "}
                                     options={[
                                         { id: 'a', text: 'Eles podem acabar presos na rede e ficar feridos ou morrer. ', explanation: 'Incrível! Isso mesmo, esses materiais descartados nos oceanos prejudicam demais a biodiversidade marinha e principalmente os animais.' },
                                         { id: 'b', text: 'A rede ajuda os animais a se esconderem de predadores.', explanation: 'Não exatamente. Embora pareça um abrigo, essa rede não oferece proteção; ela representa um grande risco para os animais. ' },
